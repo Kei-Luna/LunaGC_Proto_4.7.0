@@ -1,0 +1,8 @@
+syntax = "proto3";
+option java_package = "emu.grasscutter.net.proto";
+
+// 4.7.0
+// CmdId: 5816
+message EnterSceneReadyRsp {
+	uint32 enter_scene_token = 3;
+}

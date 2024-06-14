@@ -1,0 +1,22 @@
+syntax = "proto3";
+option java_package = "emu.grasscutter.net.proto";
+
+import "Vector.proto";
+import "MapLayerInfo.proto";
+import "EnterType.proto";
+
+// 4.7.0
+// CmdId: 23590
+message PlayerEnterSceneNotify {
+	Vector pos = 10;
+	string scene_transaction = 607;
+	repeated uint32 scene_tag_id_list = 9;
+	MapLayerInfo map_layer_info = 1413;
+	uint32 create_player_uid = 1749;
+	uint64 scene_begin_time = 6;
+	EnterType type = 1;
+	uint32 scene_id = 13;
+	uint32 target_uid = 7;
+	uint32 world_level = 11;
+	uint32 enter_scene_token = 15;
+}

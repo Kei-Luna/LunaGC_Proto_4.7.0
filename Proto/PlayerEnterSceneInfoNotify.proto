@@ -1,0 +1,16 @@
+syntax = "proto3";
+option java_package = "emu.grasscutter.net.proto";
+
+import "AvatarEnterSceneInfo.proto";
+import "MPLevelEntityInfo.proto";
+import "TeamEnterSceneInfo.proto";
+
+// 4.7.0
+// CmdId: 28783
+message PlayerEnterSceneInfoNotify {
+	repeated AvatarEnterSceneInfo avatar_enter_info = 12;
+	MPLevelEntityInfo mp_level_entity_info = 13;
+	TeamEnterSceneInfo team_enter_info = 2;
+	uint32 enter_scene_token = 1;
+	uint32 cur_avatar_entity_id = 4;
+}

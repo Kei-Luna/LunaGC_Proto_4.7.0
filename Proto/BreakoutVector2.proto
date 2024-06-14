@@ -1,0 +1,8 @@
+syntax = "proto3";
+option java_package = "emu.grasscutter.net.proto";
+
+// 4.7.0
+message BreakoutVector2 {
+	int32 x = 1;
+	int32 y = 2;
+}

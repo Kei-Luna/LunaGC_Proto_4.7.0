@@ -1,0 +1,12 @@
+syntax = "proto3";
+option java_package = "emu.grasscutter.net.proto";
+
+// 4.7.0
+// CmdId: 7412
+message PlayerLoginReq {
+	string device_info = 3;
+	string device_name = 1;
+	string system_version = 14;
+	string client_version = 15;
+	string token = 12;
+}
