@@ -1,0 +1,20 @@
+syntax = "proto3";
+option java_package = "emu.grasscutter.net.proto";
+
+import "AvatarInfo.proto";
+import "AvatarTeam.proto";
+import "AvatarRenameInfo.proto";
+
+// 4.7.0
+// CmdId: 26021
+message AvatarDataNotify {
+	repeated AvatarInfo avatar_list = 7;
+	repeated uint32 owned_costume_list = 10;
+	/* protected @ 0x30 */// repeated uint32 backup_avatar_team_order_list = 65535;
+	map<uint32, AvatarTeam> avatar_team_map = 14;
+	/* protected @ 0x40 */// repeated uint64 temp_avatar_guid_list = 65535;
+	repeated AvatarRenameInfo avatar_rename_list = 11;
+	repeated uint32 owned_flycloak_list = 13;
+	uint64 choose_avatar_guid = 8;
+	uint32 cur_avatar_team_id = 5;
+}

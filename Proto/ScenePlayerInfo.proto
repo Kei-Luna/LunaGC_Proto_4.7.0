@@ -1,0 +1,14 @@
+syntax = "proto3";
+option java_package = "emu.grasscutter.net.proto";
+
+import "OnlinePlayerInfo.proto";
+
+// 4.7.0
+message ScenePlayerInfo {
+	uint32 peer_id = 3;
+	OnlinePlayerInfo online_player_info = 6;
+	bool is_connected = 7;
+	uint32 uid = 9;
+	string name = 11;
+	uint32 scene_id = 15;
+}

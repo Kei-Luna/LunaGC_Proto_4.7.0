@@ -1,0 +1,11 @@
+syntax = "proto3";
+option java_package = "emu.grasscutter.net.proto";
+
+import "PlayTeamEntityInfo.proto";
+
+// 4.7.0
+// CmdId: 22675
+message SyncScenePlayTeamEntityNotify {
+	uint32 scene_id = 10;
+	repeated PlayTeamEntityInfo entity_info_list = 15;
+}

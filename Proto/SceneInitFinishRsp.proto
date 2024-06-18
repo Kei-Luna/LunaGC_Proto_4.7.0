@@ -1,0 +1,9 @@
+syntax = "proto3";
+option java_package = "emu.grasscutter.net.proto";
+
+// 4.7.0
+// CmdId: 3099
+message SceneInitFinishRsp {
+	/* protected @ 0x20 */// int32 retcode = 65535;
+	uint32 enter_scene_token = 10;
+}

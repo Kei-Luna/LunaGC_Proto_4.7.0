@@ -4,5 +4,6 @@ option java_package = "emu.grasscutter.net.proto";
 // 4.7.0
 // CmdId: 9174
 message PostEnterSceneReq {
+	double total_tick_time = 5;
 	uint32 enter_scene_token = 6;
 }

@@ -1,0 +1,8 @@
+syntax = "proto3";
+option java_package = "emu.grasscutter.net.proto";
+
+// 4.7.0
+// CmdId: 5877
+message GetShopReq {
+	uint32 shop_type = 14;
+}

@@ -1,0 +1,46 @@
+syntax = "proto3";
+option java_package = "emu.grasscutter.net.proto";
+
+import "ResVersionConfig.proto";
+
+// 4.7.0
+// CmdId: 22719
+message PlayerLoginRsp {
+	/* protected @ 0x20 */// ResVersionConfig next_res_version_config = 65535;
+	/* protected @ 0x28 */// repeated GALAHDJCBHK EJJHOHMIHAI = 65535;
+	/* protected @ 0x30 */// string AOLDDAFDNEC = 65535;
+	string country_code = 184;
+	/* protected @ 0x40 */// string birthday = 65535;
+	/* protected @ 0x48 */// string HMJJDLDHKNO = 65535;
+	/* protected @ 0x50 */// map<uint32, BlockInfo> block_info_map = 65535;
+	/* protected @ 0x58 */// string EHNFCHGOKEP = 65535;
+	/* protected @ 0x60 */// string ABMBBEDGDFD = 65535;
+	/* protected @ 0x68 */// repeated KMJEEFEIMMC ANNJNAKCOBF = 65535;
+	/* protected @ 0x70 */// map<string, int32> ability_hash_map = 65535;
+	/* protected @ 0x78 */// bytes sc_info = 65535;
+	/* protected @ 0x80 */// string HEEKOFPOKBG = 65535;
+	/* protected @ 0x88 */// string LNGFPHNIJPJ = 65535;
+	string game_biz = 13;
+	ResVersionConfig res_version_config = 1498;
+	/* protected @ 0xA0 */// bytes player_data = 65535;
+	/* protected @ 0xA8 */// StopServerInfo FGGLOEBHLBN = 65535;
+	/* protected @ 0xB0 */// string AJOEFDIKLHM = 65535;
+	/* protected @ 0xB8 */// bool is_transfer = 65535;
+	/* protected @ 0xB9 */// bool ADFFLOANLEB = 65535;
+	/* protected @ 0xBA */// bool CKPBABGDMKC = 65535;
+	/* protected @ 0xBB */// bool is_audit = 65535;
+	/* protected @ 0xBC */// bool OBPBMGALEGL = 65535;
+	/* protected @ 0xBD */// bool NLAIIDBPFJA = 65535;
+	/* protected @ 0xBE */// bool LEPDAGALLND = 65535;
+	/* protected @ 0xC0 */// double total_tick_time = 65535;
+	/* protected @ 0xC8 */// uint32 client_data_version = 65535;
+	/* protected @ 0xCC */// bool is_data_need_relogin = 65535;
+	/* protected @ 0xCD */// bool HOALOGAFAOL = 65535;
+	/* protected @ 0xD0 */// int32 retcode = 65535;
+	/* protected @ 0xD4 */// int32 ADGEDECFFLF = 65535;
+	/* protected @ 0xD8 */// uint32 client_silence_data_version = 65535;
+	/* protected @ 0xDC */// uint32 OENGIKPKKPK = 65535;
+	/* protected @ 0xE0 */// uint32 target_uid = 65535;
+	/* protected @ 0xE4 */// uint32 BKDPFEOOHKC = 65535;
+	/* protected @ 0xE8 */// uint64 login_rand = 65535;
+}
