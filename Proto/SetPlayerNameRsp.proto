@@ -1,0 +1,9 @@
+syntax = "proto3";
+option java_package = "emu.grasscutter.net.proto";
+
+// 4.7.0
+// CmdId: 8361
+message SetPlayerNameRsp {
+	string nick_name = 2;
+	int32 retcode = 13;
+}
