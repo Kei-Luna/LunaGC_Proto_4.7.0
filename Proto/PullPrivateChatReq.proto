@@ -1,0 +1,10 @@
+syntax = "proto3";
+option java_package = "emu.grasscutter.net.proto";
+
+// 4.7.0
+// CmdId: 9253
+message PullPrivateChatReq {
+	uint32 from_sequence = 3;
+	uint32 pull_num = 7;
+	uint32 target_uid = 9;
+}
