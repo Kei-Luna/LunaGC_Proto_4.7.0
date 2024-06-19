@@ -1,0 +1,9 @@
+syntax = "proto3";
+option java_package = "emu.grasscutter.net.proto";
+
+import "DetailAbilityInfo.proto";
+
+// 4.7.0
+message DetailInfo {
+	optional DetailAbilityInfo detail_ability_info = 15;
+}
