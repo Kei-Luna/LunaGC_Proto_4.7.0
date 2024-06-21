@@ -1,0 +1,8 @@
+syntax = "proto3";
+option java_package = "emu.grasscutter.net.proto";
+
+// 4.7.0
+// CmdId: 23233
+message Loop_4_7_0 {
+	uint32 entity_id = 2;
+}

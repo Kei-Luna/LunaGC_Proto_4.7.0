@@ -1,0 +1,11 @@
+syntax = "proto3";
+option java_package = "emu.grasscutter.net.proto";
+
+import "EntityClientData.proto";
+
+// 4.7.0
+// CmdId: 28968
+message SetEntityClientDataNotify {
+	EntityClientData entity_client_data = 6;
+	uint32 entity_id = 7;
+}

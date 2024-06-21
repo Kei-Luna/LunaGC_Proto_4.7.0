@@ -1001,7 +1001,7 @@ message PCCADCGKDBJ {
 
 // CmdId: 21461
 message ChangeAvatarReq {
-	/* protected @ 0x20 */// Vector move_pos = 65535;
+	/* protected @ 0x20 */// Vector move_pos = 4;
 	/* protected @ 0x28 */// uint64 guid = 65535;
 	/* protected @ 0x30 */// bool FBNHOFGPIDK = 65535;
 	/* protected @ 0x31 */// bool FDHGMIPOKFE = 65535;
@@ -9980,7 +9980,7 @@ message SceneAreaWeatherNotify {
 	float trans_duration = 15;
 }
 
-message JOEMAFMEGEA {
+message AiThreatInfo {
 	map<uint32, uint32> ai_threat_map = 15;
 }
 
@@ -28037,8 +28037,8 @@ enum JAIHIOJFBHF {
 }
 
 // CmdId: 2682
-message BGPIFNJHAMD {
-	map<uint32, JOEMAFMEGEA> PFHGIJKMHPL = 3;
+message EvtAiSyncCombatThreatInfoNotify {
+	map<uint32, AiThreatInfo> combat_threat_info_map = 3;
 }
 
 // CmdId: 26911
@@ -29742,7 +29742,7 @@ message PlayerWorldSceneInfo {
 }
 
 // CmdId: 28968
-message ICJKJNGHOBB {
+message SetEntityClientDataNotify {
 	EntityClientData entity_client_data = 6;
 	uint32 entity_id = 7;
 }

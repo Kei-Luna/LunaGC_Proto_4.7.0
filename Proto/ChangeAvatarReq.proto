@@ -1,0 +1,13 @@
+syntax = "proto3";
+option java_package = "emu.grasscutter.net.proto";
+
+import "Vector.proto";
+
+// 4.7.0
+message ChangeAvatarReq {
+	Vector move_pos = 15;
+	uint64 guid = 2;
+	bool is_move = 1;
+	/* protected @ 0x31 */// bool FDHGMIPOKFE = 65535;
+	uint32 skill_id = 9;
+}
