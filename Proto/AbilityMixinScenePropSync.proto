@@ -1,0 +1,11 @@
+syntax = "proto3";
+option java_package = "emu.grasscutter.net.proto";
+
+import "MassivePropSyncInfo.proto";
+
+// 4.7.0
+message AbilityMixinScenePropSync {
+	bool is_clear_all = 1;
+	repeated int64 delete_id_list = 2;
+	repeated MassivePropSyncInfo massive_prop_list = 9;
+}

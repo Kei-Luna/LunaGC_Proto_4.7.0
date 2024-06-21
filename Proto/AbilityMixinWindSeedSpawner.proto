@@ -1,0 +1,24 @@
+syntax = "proto3";
+option java_package = "emu.grasscutter.net.proto";
+
+import "Vector.proto";
+
+// 4.7.0
+message AbilityMixinWindSeedSpawner {
+	message AddSignal {
+	}
+
+	message RefreshSeed {
+		repeated Vector pos_list = 11;
+	}
+
+	message CatchSeed {
+		uint32 entity_id = 15;
+	}
+
+	oneof cmd {
+		AddSignal add_signal = 11;
+		RefreshSeed refresh_seed = 9;
+		CatchSeed catch_seed = 2;
+	}
+}

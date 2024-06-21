@@ -1,0 +1,12 @@
+syntax = "proto3";
+option java_package = "emu.grasscutter.net.proto";
+
+import "FriendBrief.proto";
+
+// 4.7.0
+// CmdId: 4989
+message GetPlayerFriendListRsp {
+	/* protected @ 0x20 */// repeated FriendBrief ask_friend_list = 65535;
+	repeated FriendBrief friend_list = 1;
+	/* protected @ 0x30 */// int32 retcode = 65535;
+}

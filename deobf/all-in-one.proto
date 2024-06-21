@@ -833,7 +833,7 @@ message PNCJONOMFEG {
 	HJGEAKLAINI action_type = 1;
 	uint32 FOLDKOGJNEC = 2;
 	uint32 BFDCMJMCICH = 4;
-	repeated CKKJCKMPGOO GJFCBLJDMML = 11;
+	repeated GCGMessage GJFCBLJDMML = 11;
 }
 
 message BLKDHEHMGMM {
@@ -3795,27 +3795,27 @@ message NAAEGELDHMK {
 }
 
 enum PlatformType {
-	PlatformType_EDITOR = 0;
-	PlatformType_IOS = 1;
-	PlatformType_ANDROID = 2;
-	PlatformType_PC = 3;
-	PlatformType_PS4 = 4;
-	PlatformType_SERVER = 5;
-	PlatformType_CLOUD_ANDROID = 6;
-	PlatformType_CLOUD_IOS = 7;
-	PlatformType_PS5 = 8;
-	PlatformType_CLOUD_WEB = 9;
-	PlatformType_CLOUD_TV = 10;
-	PlatformType_CLOUD_MAC = 11;
-	PlatformType_CLOUD_PC = 12;
-	PlatformType_CLOUD_THIRD_PARTY_MOBILE = 13;
-	PlatformType_CLOUD_THIRD_PARTY_PC = 14;
-	PlatformType_CLOUD_WEB_ANDROID = 15;
-	PlatformType_CLOUD_WEB_IOS = 16;
-	PlatformType_CLOUD_WEB_PC = 17;
-	PlatformType_CLOUD_WEB_MAC = 18;
-	PlatformType_CLOUD_WEB_TOUCH = 19;
-	PlatformType_CLOUD_WEB_KEYBOARD = 20;
+	PLATFORM_TYPE_EDITOR = 0;
+	PLATFORM_TYPE_IOS = 1;
+	PLATFORM_TYPE_ANDROID = 2;
+	PLATFORM_TYPE_PC = 3;
+	PLATFORM_TYPE_PS4 = 4;
+	PLATFORM_TYPE_SERVER = 5;
+	PLATFORM_TYPE_CLOUD_ANDROID = 6;
+	PLATFORM_TYPE_CLOUD_IOS = 7;
+	PLATFORM_TYPE_PS5 = 8;
+	PLATFORM_TYPE_CLOUD_WEB = 9;
+	PLATFORM_TYPE_CLOUD_TV = 10;
+	PLATFORM_TYPE_CLOUD_MAC = 11;
+	PLATFORM_TYPE_CLOUD_PC = 12;
+	PLATFORM_TYPE_CLOUD_THIRD_PARTY_MOBILE = 13;
+	PLATFORM_TYPE_CLOUD_THIRD_PARTY_PC = 14;
+	PLATFORM_TYPE_CLOUD_WEB_ANDROID = 15;
+	PLATFORM_TYPE_CLOUD_WEB_IOS = 16;
+	PLATFORM_TYPE_CLOUD_WEB_PC = 17;
+	PLATFORM_TYPE_CLOUD_WEB_MAC = 18;
+	PLATFORM_TYPE_CLOUD_WEB_TOUCH = 19;
+	PLATFORM_TYPE_CLOUD_WEB_KEYBOARD = 20;
 }
 
 // CmdId: 4721
@@ -4549,7 +4549,7 @@ message AGBNBMEJGOI {
 	map<uint32, uint32> KJKFECELOLF = 1;
 	bool BPPELHIEGBJ = 2;
 	uint32 FJFENDDFAIF = 8;
-	bool LGKDLLMJAKJ = 9;
+	bool is_clear_all = 9;
 }
 
 // CmdId: 2328
@@ -4776,7 +4776,7 @@ message GHOKBFLEFDE {
 message EKNMPIFPAED {
 	int32 retcode = 5;
 	uint32 uid = 6;
-	repeated ANEBDDKFDGK show_avatar_info_list = 9;
+	repeated ShowAvatarInfo show_avatar_info_list = 9;
 }
 
 message BFLBENAIMJH {
@@ -5445,10 +5445,10 @@ message MOGLEMOMNDL {
 	bool LPIPMFLMDCI = 14;
 }
 
-message OEJDFKBILPL {
+message AbilityMixinShieldBar {
 	uint32 element_type = 6;
 	float MKAOJEFNKFJ = 7;
-	uint32 LNJFLBBBBJL = 8;
+	uint32 player_num = 8;
 	float FHPENDKOCEN = 11;
 }
 
@@ -10247,10 +10247,10 @@ message OCEAOGAHCGK {
 	repeated ADOIPPBEAAL info_list = 5;
 }
 
-message CKKJCKMPGOO {
-	oneof NDHPJFCOBGL {
-		FOIOIAEHJKB token_change = 15;
-		GGMBNMLNNJI phase_change = 10;
+message GCGMessage {
+	oneof message {
+		GCGMsgTokenChange token_change = 15;
+		GCGMsgPhaseChange phase_change = 10;
 		AGGHLLEPNNK add_cards = 5;
 		HJDBMEBNPDE remove_cards = 1;
 		DNNPDHCIDOJ select_on_stage = 9;
@@ -12259,7 +12259,7 @@ message JLIKEMMKHMN {
 	bool IHHFINLLOIN = 9;
 }
 
-message FOIOIAEHJKB {
+message GCGMsgTokenChange {
 	uint32 PGBDPGGINBO = 5;
 	uint32 EMJDAELHBFP = 6;
 	uint32 ANGFLNNANFF = 7;
@@ -12993,7 +12993,7 @@ message PKFDNPOKJIF {
 	repeated ItemParam item_list = 9;
 }
 
-message ECCNMALMKMG {
+message AddNoGachaAvatarCardTransferItem {
 	bool is_new = 2;
 	uint32 item_id = 5;
 	uint32 count = 11;
@@ -13475,7 +13475,7 @@ message NFKENAKJINE {
 	repeated uint32 HKJCBGLNKBK = 1;
 	bool DLNLBAHCHOD = 3;
 	int32 retcode = 4;
-	repeated ANEBDDKFDGK show_avatar_info_list = 7;
+	repeated ShowAvatarInfo show_avatar_info_list = 7;
 }
 
 // CmdId: 5636
@@ -14217,9 +14217,9 @@ message NFPNCMADMIE {
 
 // CmdId: 26884
 message GNGGDHKKCCH {
-	repeated ECCNMALMKMG JBEBKPAIAKL = 2;
+	repeated AddNoGachaAvatarCardTransferItem transfer_item_list = 2;
 	uint32 JCNEKOCCLFH = 3;
-	bool EJMDGDMEALP = 4;
+	bool is_transfer_to_item = 4;
 	uint32 reason = 8;
 	uint32 avatar_id = 11;
 	uint32 item_id = 12;
@@ -17497,10 +17497,10 @@ message LKPDNIKINBA {
 	int32 retcode = 15;
 }
 
-message GJFAOBDHFHB {
-	string HHKIELEKCND = 1;
+message AbilityMixinGlobalShield {
+	string shield_effect_name = 1;
 	float AAPFMCKFAGA = 4;
-	bool NGGANEKKGLL = 5;
+	bool is_create_effect = 5;
 	float MKAOJEFNKFJ = 6;
 	uint32 avatar_id = 11;
 	float KMLGEAJCMMF = 13;
@@ -20614,9 +20614,9 @@ message ALEALDMGGIB {
 	repeated uint32 skill_id = 3;
 }
 
-message OELJIMMKMJB {
-	bool LGKDLLMJAKJ = 1;
-	repeated int64 ANBPAPBNJIA = 2;
+message AbilityMixinScenePropSync {
+	bool is_clear_all = 1;
+	repeated int64 delete_id_list = 2;
 	repeated MassivePropSyncInfo massive_prop_list = 9;
 }
 
@@ -21396,12 +21396,12 @@ enum PIFFAGAEKHH {
 	PIFFAGAEKHH_EFFIGY_CHALLENGE_V4_RESTART_END_REASON_REJECT = 2;
 }
 
-message KIJPPNLNAAN {
+message AbilityMixinElementShield {
 	float MKAOJEFNKFJ = 1;
 	float FHPENDKOCEN = 2;
-	bool DNIKHDKEHCM = 3;
+	bool is_shield_broken = 3;
 	uint32 ENHELJJBGBH = 4;
-	uint32 LNJFLBBBBJL = 6;
+	uint32 player_num = 6;
 	float AAPFMCKFAGA = 7;
 }
 
@@ -22994,7 +22994,7 @@ message FIBBLLMMIGM {
 	repeated uint32 MKNHIFNCBIN = 1;
 }
 
-message ANEBDDKFDGK {
+message ShowAvatarInfo {
 	uint32 avatar_id = 1;
 	map<uint32, PropValue> prop_map = 2;
 	repeated uint32 talent_id_list = 3;
@@ -23004,7 +23004,7 @@ message ANEBDDKFDGK {
 	repeated uint32 inherent_proud_skill_list = 7;
 	map<uint32, uint32> skill_level_map = 8;
 	map<uint32, uint32> proud_skill_extra_level_map = 9;
-	repeated DIJEFEFDDBD MALHKFGAOCD = 10;
+	repeated ShowEquip equip_list = 10;
 	AvatarFetterInfo fetter_info = 11;
 	uint32 costume_id = 12;
 	AvatarExcelInfo excel_info = 13;
@@ -24213,7 +24213,7 @@ message DFEHHCKJLKM {
 	uint32 level_id = 15;
 }
 
-message DIJEFEFDDBD {
+message ShowEquip {
 	uint32 item_id = 1;
 	oneof detail {
 		Reliquary reliquary = 2;
@@ -26979,7 +26979,7 @@ message MFBFOGGCCFI {
 	uint32 PHGBIOPKMFD = 2;
 }
 
-message GGMBNMLNNJI {
+message GCGMsgPhaseChange {
 	FKDAFCHFHEP POFHPPLKHJO = 6;
 	repeated Uint32Pair OCAOGCIMDEH = 8;
 	FKDAFCHFHEP FDMJECMCAOM = 14;
@@ -27744,22 +27744,22 @@ message IDFFOMGNHGL {
 	HLAECEGHEAM NBKFGCBLFAA = 15;
 }
 
-message IFHEIAHFCDM {
-	message PLMKIIDIBAA {
+message AbilityMixinWindSeedSpawner {
+	message AddSignal {
 	}
 
-	message EBLBMBAIINL {
-		repeated Vector BJDIKKOPENM = 11;
+	message RefreshSeed {
+		repeated Vector pos_list = 11;
 	}
 
-	message JFMLOACDJBB {
+	message CatchSeed {
 		uint32 entity_id = 15;
 	}
 
-	oneof DLFHCEKAONB {
-		PLMKIIDIBAA add_signal = 11;
-		EBLBMBAIINL refresh_seed = 9;
-		JFMLOACDJBB catch_seed = 2;
+	oneof cmd {
+		AddSignal add_signal = 11;
+		RefreshSeed refresh_seed = 9;
+		CatchSeed catch_seed = 2;
 	}
 }
 
