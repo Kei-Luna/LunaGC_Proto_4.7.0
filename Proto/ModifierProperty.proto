@@ -1,0 +1,10 @@
+syntax = "proto3";
+option java_package = "emu.grasscutter.net.proto";
+
+import "AbilityString.proto";
+
+// 4.7.0
+message ModifierProperty {
+	float value = 1;
+	AbilityString key = 11;
+}

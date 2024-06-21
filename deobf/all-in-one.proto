@@ -1111,7 +1111,7 @@ message IPEIEMJJLAK {
 	uint32 PIFAMKANMNF = 3;
 	bool LOEIFINMALC = 9;
 	uint32 uid = 11;
-	uint32 AKCLAOEDBIN = 12;
+	uint32 cur_score = 12;
 }
 
 // CmdId: 2918
@@ -1402,8 +1402,8 @@ message FinishedParentQuestNotify {
 	repeated ParentQuest parent_quest_list = 8;
 }
 
-message MOIFJBMOMFG {
-	AbilityAppliedAbility NAJCAHCONPC = 7;
+message AbilityMetaAddAbility {
+	AbilityAppliedAbility ability = 7;
 }
 
 // CmdId: 26571
@@ -2939,9 +2939,9 @@ message EBGPEGIHDFJ {
 	uint32 ALFKLLMIJBI = 10;
 }
 
-message HHDDJOPNIGB {
-	Vector DOPIPJCEFFB = 4;
-	float ANGONOJHONO = 12;
+message AbilityActionSetCrashDamage {
+	Vector hit_pos = 4;
+	float damage = 12;
 }
 
 // CmdId: 1021
@@ -3071,7 +3071,7 @@ message GKAOJBDAIPK {
 	uint32 FEDHMPEHNGG = 15;
 }
 
-message NJKOOGKKAIE {
+message CylinderRegionSize {
 	float ANBMKICECKG = 2;
 	float PCINBEPDEEC = 10;
 }
@@ -4676,15 +4676,15 @@ message GetPlayerFriendListReq {
 }
 
 enum ForwardType {
-	ForwardType_FORWARD_LOCAL = 0;
-	ForwardType_FORWARD_TO_ALL = 1;
-	ForwardType_FORWARD_TO_ALL_EXCEPT_CUR = 2;
-	ForwardType_FORWARD_TO_HOST = 3;
-	ForwardType_FORWARD_TO_ALL_GUEST = 4;
-	ForwardType_FORWARD_TO_PEER = 5;
-	ForwardType_FORWARD_TO_PEERS = 6;
-	ForwardType_FORWARD_ONLY_SERVER = 7;
-	ForwardType_FORWARD_TO_ALL_EXIST_EXCEPT_CUR = 8;
+	FORWARD_TYPE_LOCAL = 0;
+	FORWARD_TYPE_TO_ALL = 1;
+	FORWARD_TYPE_TO_ALL_EXCEPT_CUR = 2;
+	FORWARD_TYPE_TO_HOST = 3;
+	FORWARD_TYPE_TO_ALL_GUEST = 4;
+	FORWARD_TYPE_TO_PEER = 5;
+	FORWARD_TYPE_TO_PEERS = 6;
+	FORWARD_TYPE_ONLY_SERVER = 7;
+	FORWARD_TYPE_TO_ALL_EXIST_EXCEPT_CUR = 8;
 }
 
 // CmdId: 24472
@@ -4947,7 +4947,7 @@ message KFFABNDODHE {
 }
 
 message JGJJNLFAFJG {
-	repeated GameplayRecommendationReliquaryMainPropData BGJPDAAACLL = 2;
+	repeated GameplayRecommendationReliquaryMainPropData main_prop_data_list = 2;
 	uint32 equip_type = 12;
 	uint32 element_type = 15;
 }
@@ -5855,7 +5855,7 @@ message QuestGlobalVarNotify {
 message LOEFFMOFGIH {
 	uint32 LOIEKFANKLK = 1;
 	uint32 level_id = 6;
-	uint32 AKCLAOEDBIN = 10;
+	uint32 cur_score = 10;
 }
 
 message KMCIBLHJGAE {
@@ -6061,7 +6061,7 @@ message JHJPFGGEGMI {
 	int32 retcode = 12;
 	oneof detail {
 		MBJLBDEFLBK skill_response = 694;
-		HFEEGIFENPN reliquary_response = 147;
+		GameplayRecommendationReliquaryResponse reliquary_response = 147;
 		JGJJNLFAFJG element_reliquary_response = 716;
 		GKPGMHODOMC reliquary_set_response = 1414;
 		PLKMJECOBFC element_reliquary_set_response = 153;
@@ -7356,7 +7356,7 @@ message NLBHGNCPNAD {
 }
 
 message OCKJAGDBEGB {
-	BreakoutAction JKNHKEMBJJN = 9;
+	BreakoutAction action = 9;
 }
 
 // CmdId: 2356
@@ -7386,7 +7386,7 @@ message KPMPOIEPDEE {
 	uint32 LFODEEDFHPI = 14;
 }
 
-message HAHPCLENIFB {
+message MonsterWaveDeactive {
 	uint32 PGOCJLDLODG = 4;
 }
 
@@ -7592,7 +7592,7 @@ message GetPlayerTokenReq {
 	/* protected @ 0xB4 */// uint32 OLHFOBMGLID = 65535;
 }
 
-message KLBCKLBPPBH {
+message AbilityMetaSetPoseParameter {
 	AnimatorParameterValueInfoPair value = 3;
 }
 
@@ -8047,7 +8047,7 @@ message OGBAMGOLLAO {
 message EDOFPLNBDGH {
 	repeated uint32 PEFBJIPEFEO = 4;
 	repeated NMNLNLNKDJC AFIBFAIEJKG = 7;
-	uint32 AKCLAOEDBIN = 12;
+	uint32 cur_score = 12;
 	uint32 HBLIKHNPJGE = 15;
 }
 
@@ -8063,8 +8063,8 @@ message IDCJGOPNCKJ {
 	bool OMGIHMMEJNF = 10;
 }
 
-message GEKGKAKAEHP {
-	AbilityString PHNNEINMHDL = 1;
+message AbilityMetaUpdateBaseReactionDamage {
+	AbilityString global_value_key = 1;
 	uint32 BKFENIMONKD = 3;
 	uint32 KLLHKIFAHAK = 8;
 	AbilityString ability_name = 13;
@@ -8563,7 +8563,7 @@ message OCJBCPNEOPA {
 	uint32 PONPPBPHLDP = 7;
 }
 
-message GKIGBJMKHOL {
+message AbilityMetaReInitOverrideMap {
 	repeated AbilityScalarValueEntry override_map = 10;
 }
 
@@ -9886,7 +9886,7 @@ message LJAAEFHKENH {
 	uint32 CIHMOCCDKBM = 13;
 }
 
-message COBJAMGFDHP {
+message PolygonRegionSize {
 	float ANBMKICECKG = 2;
 	repeated AOLNMMOBAHF point_list = 5;
 }
@@ -10454,8 +10454,8 @@ message FBFHNGJHLHN {
 
 // CmdId: 22753
 message HELBDLIGIKA {
-	uint32 AKCLAOEDBIN = 2;
-	uint32 CKMDFHJCLJG = 10;
+	uint32 cur_score = 2;
+	uint32 add_score = 10;
 	uint32 gallery_id = 12;
 }
 
@@ -11297,7 +11297,7 @@ message JPBEEJIMHJH {
 
 message CKLBPINNMHE {
 	bool is_new = 1;
-	uint32 JCCJNDODMDC = 7;
+	uint32 source_id = 7;
 	uint32 count = 9;
 	repeated uint32 INJHFJPGFKC = 10;
 }
@@ -12213,7 +12213,7 @@ message EDLLCMFDGLE {
 message HINOAECPOPL {
 	LAANABCDNAM DAJLNNFGBJH = 4;
 	DFPNCBIAAFI GMPIIFBIGPB = 5;
-	uint32 AKCLAOEDBIN = 10;
+	uint32 cur_score = 10;
 	uint32 enter_type = 11;
 	uint32 MPLPLBEHBMG = 12;
 	uint32 FGLCMJMOHHP = 15;
@@ -12636,6 +12636,8 @@ message HECPIBEMAAC {
 	int32 retcode = 1;
 }
 
+
+//AbilityActionGenerateElemBall or AbilityActionCreateGadget
 message LNFNHFNNCOP {
 	Vector pos = 7;
 	Vector rot = 9;
@@ -15002,7 +15004,7 @@ message AttackResult {
 	uint32 attacker_id = 5;
 	uint32 DMEFLHEBFGE = 6;
 	uint32 element_type = 7;
-	float ANGONOJHONO = 8;
+	float damage = 8;
 	int32 hit_retreat_angle_compat = 9;
 	Vector resolved_dir = 10;
 	uint32 LONHILAPBAM = 11;
@@ -17396,8 +17398,8 @@ message BPFDMDJGLOG {
 	oneof FAOLEEADJIF {
 		float sphere_radius = 1128;
 		Vector cubic_size = 1519;
-		NJKOOGKKAIE cylinder_size = 1603;
-		COBJAMGFDHP polygon_size = 1046;
+		CylinderRegionSize cylinder_size = 1603;
+		PolygonRegionSize polygon_size = 1046;
 	}
 }
 
@@ -17555,7 +17557,7 @@ message DBLDNFMLBEK {
 	uint32 CHEHLPACEFP = 12;
 	uint32 GMKOBHCAGGE = 13;
 	uint32 uid = 14;
-	uint32 AKCLAOEDBIN = 15;
+	uint32 cur_score = 15;
 }
 
 message OOKEKDNOGAJ {
@@ -18389,11 +18391,11 @@ message DNIINCONJJE {
 }
 
 // CmdId: 7075
-message HBMEIAONDMG {
-	uint32 FBNCFDAFDHP = 5;
+message HomeBalloonGalleryScoreNotify {
+	uint32 trigger_entity_id = 5;
 	uint32 gallery_id = 10;
-	uint32 AKCLAOEDBIN = 14;
-	uint32 CKMDFHJCLJG = 15;
+	uint32 cur_score = 14;
+	uint32 add_score = 15;
 }
 
 message CGOCIAEDBKB {
@@ -18672,7 +18674,7 @@ message IGNFHIOMIFM {
 	BNKOODPPHMC DKOBKKMFMAD = 11;
 }
 
-message NCPHGNFGFNN {
+message GadgetStateChange {
 	uint32 gadget_state = 6;
 	uint32 GCDJMPBFNLH = 10;
 }
@@ -19172,7 +19174,7 @@ message OKDOJDFNCMP {
 
 message HEACCMFBOHE {
 	bool HHALAHALMKI = 5;
-	uint32 AKCLAOEDBIN = 11;
+	uint32 cur_score = 11;
 	uint32 AFJJPHANFHE = 12;
 	bool IDBFEDAEPGD = 14;
 	bool is_finish = 15;
@@ -19443,7 +19445,7 @@ message PDAPOGMFILK {
 	int32 retcode = 4;
 }
 
-message PBIAHDAILHM {
+message MonsterGroupDeactive {
 	uint32 FOJONINCCDL = 7;
 }
 
@@ -19539,12 +19541,12 @@ message LGPPDKJFLDP {
 	int32 retcode = 2;
 }
 
-message DJKBMPMECHI {
+message AbilityMetaTriggerElementReaction {
 	uint32 PINGPLBHNMO = 1;
-	uint32 FBNCFDAFDHP = 3;
+	uint32 trigger_entity_id = 3;
 	uint32 AENAEJKMCMA = 5;
 	uint32 BIAOGHFEDAA = 12;
-	int32 KLENBMOBENJ = 13;
+	int32 hit_index = 13;
 }
 
 // CmdId: 4076
@@ -20408,6 +20410,8 @@ message BNGLFGCPEOD {
 	int32 retcode = 12;
 }
 
+
+//AbilityActionGenerateElemBall or AbilityActionCreateGadget
 message MGDJNOGCOIB {
 	Vector pos = 6;
 	Vector rot = 8;
@@ -20990,9 +20994,9 @@ message PlayerPropChangeReasonNotify {
 }
 
 message CJMBMKOOMDM {
-	uint32 AKCLAOEDBIN = 4;
+	uint32 cur_score = 4;
 	uint32 combo = 5;
-	uint32 PJLFMMJFBFE = 10;
+	uint32 combo_disable_time = 10;
 	uint32 uid = 12;
 }
 
@@ -21034,84 +21038,81 @@ message DJKOKCKJDOB {
 }
 
 enum AbilityInvokeArgument {
-	AbilityInvokeArgument_ABILITY_NONE = 0;
-	AbilityInvokeArgument_ABILITY_META_MODIFIER_CHANGE = 1;
-	AbilityInvokeArgument_ABILITY_META_COMMAND_MODIFIER_CHANGE_REQUEST = 2;
-	AbilityInvokeArgument_ABILITY_META_SPECIAL_FLOAT_ARGUMENT = 3;
-	AbilityInvokeArgument_ABILITY_META_OVERRIDE_PARAM = 4;
-	AbilityInvokeArgument_ABILITY_META_CLEAR_OVERRIDE_PARAM = 5;
-	AbilityInvokeArgument_ABILITY_META_REINIT_OVERRIDEMAP = 6;
-	AbilityInvokeArgument_ABILITY_META_GLOBAL_FLOAT_VALUE = 7;
-	AbilityInvokeArgument_ABILITY_META_CLEAR_GLOBAL_FLOAT_VALUE = 8;
-	AbilityInvokeArgument_ABILITY_META_ABILITY_ELEMENT_STRENGTH = 9;
-	AbilityInvokeArgument_ABILITY_META_ADD_OR_GET_ABILITY_AND_TRIGGER = 10;
-	AbilityInvokeArgument_ABILITY_META_SET_KILLED_SETATE = 11;
-	AbilityInvokeArgument_ABILITY_META_SET_ABILITY_TRIGGER = 12;
-	AbilityInvokeArgument_ABILITY_META_ADD_NEW_ABILITY = 13;
-	AbilityInvokeArgument_ABILITY_META_REMOVE_ABILITY = 14;
-	AbilityInvokeArgument_ABILITY_META_SET_MODIFIER_APPLY_ENTITY = 15;
-	AbilityInvokeArgument_ABILITY_META_MODIFIER_DURABILITY_CHANGE = 16;
-	AbilityInvokeArgument_ABILITY_META_ELEMENT_REACTION_VISUAL = 17;
-	AbilityInvokeArgument_ABILITY_META_SET_POSE_PARAMETER = 18;
-	AbilityInvokeArgument_ABILITY_META_UPDATE_BASE_REACTION_DAMAGE = 19;
-	AbilityInvokeArgument_ABILITY_META_TRIGGER_ELEMENT_REACTION = 20;
-	AbilityInvokeArgument_ABILITY_META_LOSE_HP = 21;
-	AbilityInvokeArgument_ABILITY_META_DURABILITY_IS_ZERO = 22;
-	AbilityInvokeArgument_ABILITY_META_TRIGGER_ARKHE_REACTION = 23;
-	AbilityInvokeArgument_ABILITY_ACTION_TRIGGER_ABILITY = 50;
-	AbilityInvokeArgument_ABILITY_ACTION_SET_CRASH_DAMAGE = 51;
-	AbilityInvokeArgument_ABILITY_ACTION_EFFECT = 52;
-	AbilityInvokeArgument_ABILITY_ACTION_SUMMON = 53;
-	AbilityInvokeArgument_ABILITY_ACTION_BLINK = 54;
-	AbilityInvokeArgument_ABILITY_ACTION_CREATE_GADGET = 55;
-	AbilityInvokeArgument_ABILITY_ACTION_APPLY_LEVEL_MODIFIER = 56;
-	AbilityInvokeArgument_ABILITY_ACTION_GENERATE_ELEM_BALL = 57;
-	AbilityInvokeArgument_ABILITY_ACTION_SET_RANDOM_OVERRIDE_MAP_VALUE = 58;
-	AbilityInvokeArgument_ABILITY_ACTION_SERVER_MONSTER_LOG = 59;
-	AbilityInvokeArgument_ABILITY_ACTION_CREATE_TILE = 60;
-	AbilityInvokeArgument_ABILITY_ACTION_DESTROY_TILE = 61;
-	AbilityInvokeArgument_ABILITY_ACTION_FIRE_AFTER_IMAGE = 62;
-	AbilityInvokeArgument_ABILITY_ACTION_DEDUCT_STAMINA = 63;
-	AbilityInvokeArgument_ABILITY_ACTION_HIT_EFFECT = 64;
-	AbilityInvokeArgument_ABILITY_ACTION_SET_BULLET_TRACK_TARGET = 65;
-	AbilityInvokeArgument_ABILITY_ACTION_FIREWORK_EFFECT = 66;
-	AbilityInvokeArgument_ABILITY_ACTION_LEVEL_BANK_ADD_STUFF = 67;
-	AbilityInvokeArgument_ABILITY_ACTION_GET_MATERIAL_PARAM_FLOAT = 68;
-	AbilityInvokeArgument_ABILITY_ACTION_GET_MATERIAL_PARAM_VECTOR = 69;
-	AbilityInvokeArgument_ABILITY_ACTION_SPECTACLE_BUILD_RECREATE_GADGET = 70;
-	AbilityInvokeArgument_ABILITY_MIXIN_AVATAR_STEER_BY_CAMERA = 100;
-	AbilityInvokeArgument_ABILITY_MIXIN_MONSTER_DEFEND = 101;
-	AbilityInvokeArgument_ABILITY_MIXIN_WIND_ZONE = 102;
-	AbilityInvokeArgument_ABILITY_MIXIN_COST_STAMINA = 103;
-	AbilityInvokeArgument_ABILITY_MIXIN_ELITE_SHIELD = 104;
-	AbilityInvokeArgument_ABILITY_MIXIN_ELEMENT_SHIELD = 105;
-	AbilityInvokeArgument_ABILITY_MIXIN_GLOBAL_SHIELD = 106;
-	AbilityInvokeArgument_ABILITY_MIXIN_SHIELD_BAR = 107;
-	AbilityInvokeArgument_ABILITY_MIXIN_WIND_SEED_SPAWNER = 108;
-	AbilityInvokeArgument_ABILITY_MIXIN_DO_ACTION_BY_ELEMENT_REACTION = 109;
-	AbilityInvokeArgument_ABILITY_MIXIN_FIELD_ENTITY_COUNT_CHANGE = 110;
-	AbilityInvokeArgument_ABILITY_MIXIN_SCENE_PROP_SYNC = 111;
-	AbilityInvokeArgument_ABILITY_MIXIN_WIDGET_MP_SUPPORT = 112;
-	AbilityInvokeArgument_ABILITY_MIXIN_DO_ACTION_BY_SELF_MODIFIER_ELEMENT_DURABILITY_RATIO = 113;
-	AbilityInvokeArgument_ABILITY_MIXIN_FIREWORKS_LAUNCHER = 114;
-	AbilityInvokeArgument_ABILITY_MIXIN_ATTACK_RESULT_CREATE_COUNT = 115;
-	AbilityInvokeArgument_ABILITY_MIXIN_UGC_TIME_CONTROL = 116;
-	AbilityInvokeArgument_ABILITY_MIXIN_AVATAR_COMBAT = 117;
-	AbilityInvokeArgument_ABILITY_MIXIN_DEATH_ZONE_REGIONAL_PLAY_MIXIN = 118;
-	AbilityInvokeArgument_ABILITY_MIXIN_UI_INTERACT = 119;
-	AbilityInvokeArgument_ABILITY_MIXIN_SHOOT_FROM_CAMERA = 120;
-	AbilityInvokeArgument_ABILITY_MIXIN_ERASE_BRICK_ACTIVITY = 121;
-	AbilityInvokeArgument_ABILITY_MIXIN_BREAKOUT = 122;
-	AbilityInvokeArgument_ABILITY_MIXIN_DAMAGE_LOAN = 123;
-	AbilityInvokeArgument_ABILITY_MIXIN_BROADCAST_GV = 124;
-	AbilityInvokeArgument_ABILITY_MIXIN_RECEIVE_GV = 125;
-	AbilityInvokeArgument_ABILITY_MIXIN_RAYCAST_SELECT_TARGET = 126;
-	AbilityInvokeArgument_ABILITY_MIXIN_ENERGY_CRYSTAL_TARGET = 127;
-	AbilityInvokeArgument_ABILITY_MIXIN_ROTATION_FOLLOW_CAMERA = 128;
-	AbilityInvokeArgument_ABILITY_MIXIN_BUOYANT_FORCE = 129;
-	AbilityInvokeArgument_ABILITY_MIXIN_FILMFEST_BALL_GAME = 130;
-	AbilityInvokeArgument_ABILITY_MIXIN_CHECK_SCAN_ENTITY = 131;
-	AbilityInvokeArgument_ABILITY_MIXIN_TIME_TRACK_PLAYER = 133;
+	ABILITY_INVOKE_ARGUMENT_NONE = 0;
+	ABILITY_INVOKE_ARGUMENT_META_MODIFIER_CHANGE = 1;
+	ABILITY_INVOKE_ARGUMENT_META_COMMAND_MODIFIER_CHANGE_REQUEST = 2;
+	ABILITY_INVOKE_ARGUMENT_META_SPECIAL_FLOAT_ARGUMENT = 3;
+	ABILITY_INVOKE_ARGUMENT_META_OVERRIDE_PARAM = 4;
+	ABILITY_INVOKE_ARGUMENT_META_CLEAR_OVERRIDE_PARAM = 5;
+	ABILITY_INVOKE_ARGUMENT_META_REINIT_OVERRIDEMAP = 6;
+	ABILITY_INVOKE_ARGUMENT_META_GLOBAL_FLOAT_VALUE = 7;
+	ABILITY_INVOKE_ARGUMENT_META_CLEAR_GLOBAL_FLOAT_VALUE = 8;
+	ABILITY_INVOKE_ARGUMENT_META_ABILITY_ELEMENT_STRENGTH = 9;
+	ABILITY_INVOKE_ARGUMENT_META_ADD_OR_GET_ABILITY_AND_TRIGGER = 10;
+	ABILITY_INVOKE_ARGUMENT_META_SET_KILLED_SETATE = 11;
+	ABILITY_INVOKE_ARGUMENT_META_SET_ABILITY_TRIGGER = 12;
+	ABILITY_INVOKE_ARGUMENT_META_ADD_NEW_ABILITY = 13;
+	ABILITY_INVOKE_ARGUMENT_META_REMOVE_ABILITY = 14;
+	ABILITY_INVOKE_ARGUMENT_META_SET_MODIFIER_APPLY_ENTITY = 15;
+	ABILITY_INVOKE_ARGUMENT_META_MODIFIER_DURABILITY_CHANGE = 16;
+	ABILITY_INVOKE_ARGUMENT_META_ELEMENT_REACTION_VISUAL = 17;
+	ABILITY_INVOKE_ARGUMENT_META_SET_POSE_PARAMETER = 18;
+	ABILITY_INVOKE_ARGUMENT_META_UPDATE_BASE_REACTION_DAMAGE = 19;
+	ABILITY_INVOKE_ARGUMENT_META_TRIGGER_ELEMENT_REACTION = 20;
+	ABILITY_INVOKE_ARGUMENT_META_LOSE_HP = 21;
+	ABILITY_INVOKE_ARGUMENT_META_DURABILITY_IS_ZERO = 22;
+	ABILITY_INVOKE_ARGUMENT_META_TRIGGER_ARKHE_REACTION = 23;
+	ABILITY_INVOKE_ARGUMENT_ACTION_TRIGGER_ABILITY = 50;
+	ABILITY_INVOKE_ARGUMENT_ACTION_SET_CRASH_DAMAGE = 51;
+	ABILITY_INVOKE_ARGUMENT_ACTION_EFFECT = 52;
+	ABILITY_INVOKE_ARGUMENT_ACTION_SUMMON = 53;
+	ABILITY_INVOKE_ARGUMENT_ACTION_BLINK = 54;
+	ABILITY_INVOKE_ARGUMENT_ACTION_CREATE_GADGET = 55;
+	ABILITY_INVOKE_ARGUMENT_ACTION_APPLY_LEVEL_MODIFIER = 56;
+	ABILITY_INVOKE_ARGUMENT_ACTION_GENERATE_ELEM_BALL = 57;
+	ABILITY_INVOKE_ARGUMENT_ACTION_SET_RANDOM_OVERRIDE_MAP_VALUE = 58;
+	ABILITY_INVOKE_ARGUMENT_ACTION_SERVER_MONSTER_LOG = 59;
+	ABILITY_INVOKE_ARGUMENT_ACTION_CREATE_TILE = 60;
+	ABILITY_INVOKE_ARGUMENT_ACTION_DESTROY_TILE = 61;
+	ABILITY_INVOKE_ARGUMENT_ACTION_FIRE_AFTER_IMAGE = 62;
+	ABILITY_INVOKE_ARGUMENT_ACTION_DEDUCT_STAMINA = 63;
+	ABILITY_INVOKE_ARGUMENT_ACTION_HIT_EFFECT = 64;
+	ABILITY_INVOKE_ARGUMENT_ACTION_SET_BULLET_TRACK_TARGET = 65;
+	ABILITY_INVOKE_ARGUMENT_ACTION_FIREWORK_EFFECT = 66;
+	ABILITY_INVOKE_ARGUMENT_ACTION_LEVEL_BANK_ADD_STUFF = 67;
+	ABILITY_INVOKE_ARGUMENT_MIXIN_AVATAR_STEER_BY_CAMERA = 100;
+	ABILITY_INVOKE_ARGUMENT_MIXIN_MONSTER_DEFEND = 101;
+	ABILITY_INVOKE_ARGUMENT_MIXIN_WIND_ZONE = 102;
+	ABILITY_INVOKE_ARGUMENT_MIXIN_COST_STAMINA = 103;
+	ABILITY_INVOKE_ARGUMENT_MIXIN_ELITE_SHIELD = 104;
+	ABILITY_INVOKE_ARGUMENT_MIXIN_ELEMENT_SHIELD = 105;
+	ABILITY_INVOKE_ARGUMENT_MIXIN_GLOBAL_SHIELD = 106;
+	ABILITY_INVOKE_ARGUMENT_MIXIN_SHIELD_BAR = 107;
+	ABILITY_INVOKE_ARGUMENT_MIXIN_WIND_SEED_SPAWNER = 108;
+	ABILITY_INVOKE_ARGUMENT_MIXIN_DO_ACTION_BY_ELEMENT_REACTION = 109;
+	ABILITY_INVOKE_ARGUMENT_MIXIN_FIELD_ENTITY_COUNT_CHANGE = 110;
+	ABILITY_INVOKE_ARGUMENT_MIXIN_SCENE_PROP_SYNC = 111;
+	ABILITY_INVOKE_ARGUMENT_MIXIN_WIDGET_MP_SUPPORT = 112;
+	ABILITY_INVOKE_ARGUMENT_MIXIN_DO_ACTION_BY_SELF_MODIFIER_ELEMENT_DURABILITY_RATIO = 113;
+	ABILITY_INVOKE_ARGUMENT_MIXIN_FIREWORKS_LAUNCHER = 114;
+	ABILITY_INVOKE_ARGUMENT_MIXIN_ATTACK_RESULT_CREATE_COUNT = 115;
+	ABILITY_INVOKE_ARGUMENT_MIXIN_UGC_TIME_CONTROL = 116;
+	ABILITY_INVOKE_ARGUMENT_MIXIN_AVATAR_COMBAT = 117;
+	ABILITY_INVOKE_ARGUMENT_MIXIN_DEATH_ZONE_REGIONAL_PLAY_MIXIN = 118;
+	ABILITY_INVOKE_ARGUMENT_MIXIN_UI_INTERACT = 119;
+	ABILITY_INVOKE_ARGUMENT_MIXIN_SHOOT_FROM_CAMERA = 120;
+	ABILITY_INVOKE_ARGUMENT_MIXIN_ERASE_BRICK_ACTIVITY = 121;
+	ABILITY_INVOKE_ARGUMENT_MIXIN_BREAKOUT = 122;
+	ABILITY_INVOKE_ARGUMENT_MIXIN_DAMAGE_LOAN = 123;
+	ABILITY_INVOKE_ARGUMENT_MIXIN_BROADCAST_GV = 124;
+	ABILITY_INVOKE_ARGUMENT_MIXIN_RECEIVE_GV = 125;
+	ABILITY_INVOKE_ARGUMENT_MIXIN_RAYCAST_SELECT_TARGET = 126;
+	ABILITY_INVOKE_ARGUMENT_MIXIN_ENERGY_CRYSTAL_TARGET = 127;
+	ABILITY_INVOKE_ARGUMENT_MIXIN_ROTATION_FOLLOW_CAMERA = 128;
+	ABILITY_INVOKE_ARGUMENT_MIXIN_BUOYANT_FORCE = 129;
+	ABILITY_INVOKE_ARGUMENT_MIXIN_FILMFEST_BALL_GAME = 130;
+	ABILITY_INVOKE_ARGUMENT_MIXIN_CHECK_SCAN_ENTITY = 131;
+	ABILITY_INVOKE_ARGUMENT_MIXIN_TIME_TRACK_PLAYER = 133;
 }
 
 message OAEMNJEEPGH {
@@ -21806,9 +21807,9 @@ message GDLIANIJFFC {
 message BFJACPPJAFG {
 }
 
-enum KJKBLMKLMBN {
-	KJKBLMKLMBN_ADDED = 0;
-	KJKBLMKLMBN_REMOVED = 1;
+enum ModifierAction {
+	MODIFIER_ACTION_ADDED = 0;
+	MODIFIER_ACTION_REMOVED = 1;
 }
 
 // CmdId: 8559
@@ -22849,8 +22850,8 @@ message MPLKCCCMEEP {
 
 // CmdId: 28011
 message DPGCCDKBDOG {
-	uint32 CKMDFHJCLJG = 1;
-	uint32 AKCLAOEDBIN = 3;
+	uint32 add_score = 1;
+	uint32 cur_score = 3;
 	uint32 gallery_id = 4;
 	uint32 PIFAMKANMNF = 6;
 	bool LOEIFINMALC = 8;
@@ -23031,13 +23032,13 @@ message IFJBHCIGKAA {
 }
 
 // CmdId: 7109
-message LENOPCHKDKM {
-	int32 CKMDFHJCLJG = 1;
-	uint32 FBNCFDAFDHP = 4;
+message GalleryBalloonShootNotify {
+	int32 add_score = 1;
+	uint32 trigger_entity_id = 4;
 	uint32 gallery_id = 6;
 	uint32 combo = 9;
-	uint64 PJLFMMJFBFE = 11;
-	uint32 AKCLAOEDBIN = 15;
+	uint64 combo_disable_time = 11;
+	uint32 cur_score = 15;
 }
 
 // CmdId: 24001
@@ -24201,9 +24202,9 @@ message AbilityScalarValueEntry {
 }
 
 // CmdId: 202
-message CIBBDAFAJJM {
+message MainCoopFailNotify {
 	uint32 chapter_id = 6;
-	string IOMFIAGPEOA = 13;
+	string textmap_id = 13;
 }
 
 // CmdId: 3075
@@ -24263,9 +24264,9 @@ message BIMBONMEPKB {
 	uint32 JKABDOIOGFA = 12;
 }
 
-message HFEEGIFENPN {
+message GameplayRecommendationReliquaryResponse {
 	uint32 equip_type = 1;
-	repeated GameplayRecommendationReliquaryMainPropData BGJPDAAACLL = 14;
+	repeated GameplayRecommendationReliquaryMainPropData main_prop_data_list = 14;
 }
 
 // CmdId: 27466
@@ -24463,7 +24464,7 @@ message BMJPDOLOPFO {
 // CmdId: 26430
 message HHHKOEMHBAN {
 	bool JCMHCFKDGCB = 1;
-	uint32 CKMDFHJCLJG = 3;
+	uint32 add_score = 3;
 	uint32 gallery_id = 12;
 }
 
@@ -24543,10 +24544,10 @@ message KCJPFFPJAAK {
 message PIJKHMOAIFM {
 	uint32 config_id = 13;
 	oneof param {
-		NCPHGNFGFNN gadget_state_change = 2;
-		PBIAHDAILHM monster_group_deactive = 4;
-		HAHPCLENIFB monster_wave_deactive = 6;
-		DECFMGDINJE gadget_deactive = 3;
+		GadgetStateChange gadget_state_change = 2;
+		MonsterGroupDeactive monster_group_deactive = 4;
+		MonsterWaveDeactive monster_wave_deactive = 6;
+		GadgetDeactive gadget_deactive = 3;
 	}
 }
 
@@ -24605,8 +24606,8 @@ message KEAPPLOADPD {
 	oneof FAOLEEADJIF {
 		float sphere_radius = 2009;
 		Vector cubic_size = 755;
-		NJKOOGKKAIE cylinder_size = 1636;
-		COBJAMGFDHP polygon_size = 1056;
+		CylinderRegionSize cylinder_size = 1636;
+		PolygonRegionSize polygon_size = 1056;
 	}
 }
 
@@ -24694,7 +24695,7 @@ message CEAPIJNDGLN {
 	uint32 HJFKGIOMLED = 11;
 }
 
-message DECFMGDINJE {
+message GadgetDeactive {
 	uint32 GCDJMPBFNLH = 11;
 }
 
@@ -24721,7 +24722,7 @@ message EEKGDGBPOHD {
 }
 
 message OHDGAANIKBD {
-	HPPJOBHPGHF JKNHKEMBJJN = 14;
+	HPPJOBHPGHF action = 14;
 }
 
 // CmdId: 22786
@@ -25000,7 +25001,7 @@ message PNLDCMHNKAC {
 	float BIEOOKGJFLA = 8;
 	uint32 target_id = 9;
 	float MCCHDBCEHCF = 11;
-	uint32 JCCJNDODMDC = 13;
+	uint32 source_id = 13;
 }
 
 message EMNGAJIPPBA {
@@ -25183,7 +25184,7 @@ message GMLCAGLHFAB {
 	OnlinePlayerInfo BEOHBLAOIAK = 8;
 	map<uint32, uint32> PFNKFCKIJFH = 9;
 	uint32 ANAMBAAAPIN = 14;
-	float ANGONOJHONO = 15;
+	float damage = 15;
 }
 
 // CmdId: 21451
@@ -26849,7 +26850,7 @@ message FGHHODLEFMK {
 	uint32 NMKONBGBMAK = 5;
 	uint32 skill_id = 6;
 	uint32 BDHIBJDOLNO = 7;
-	uint32 ANGONOJHONO = 9;
+	uint32 damage = 9;
 	uint32 DAMLDLDDGAI = 10;
 	repeated JEHCJKLNGAJ ABFNIGILHOK = 11;
 	uint32 EAPHFHMPCIH = 12;
@@ -28045,7 +28046,7 @@ message EntityFightPropChangeReasonNotify {
 	float HFDLKKBJNMI = 1;
 	uint32 entity_id = 3;
 	DetailInfo detail_info = 4;
-	ChangeHpDebtsReason change_hp_debts_reason = 6;
+	ChangeHpDebts change_hp_debts = 6;
 	uint32 prop_type = 7;
 	ChangeHpReason change_hp_reason = 8;
 	ChangeEnergyReason change_energy_reason = 11;
@@ -28138,7 +28139,7 @@ message DHDCNIHBOBH {
 	uint32 PILEDJAIGKC = 4;
 	bool is_taken_reward = 6;
 	repeated GOJBHODKDEB ALFAJENMCCE = 8;
-	uint32 AKCLAOEDBIN = 9;
+	uint32 cur_score = 9;
 	bool is_finished = 10;
 	repeated GOJBHODKDEB CMKOOMJABOA = 11;
 	repeated bool MBBNINCPFOJ = 15;
@@ -28548,7 +28549,7 @@ message AbilityMetaModifierChange {
 	bool MAPJDCOAIMG = 12;
 	float KKAAMMJBABH = 13;
 	uint64 KKFHAIPCCFA = 14;
-	KJKBLMKLMBN JKNHKEMBJJN = 15;
+	ModifierAction action = 15;
 }
 
 // CmdId: 3867
@@ -29156,7 +29157,7 @@ message ActivityInfo {
 	repeated uint64 MKPNPGBDMLK = 470;
 	map<uint32, uint32> JHBOENENPPG = 578;
 	repeated uint32 LFJEOIFCMBA = 676;
-	uint32 AKCLAOEDBIN = 738;
+	uint32 cur_score = 738;
 	map<uint32, uint32> MCOOFBHHJED = 800;
 	uint64 BJIDCNMNBGF = 872;
 	repeated NGGPLOGCGMF GHMEPBPLPKD = 1223;
@@ -29450,7 +29451,7 @@ message IJOCCECEFBD {
 	uint32 JECFCPILBCM = 9;
 }
 
-message IGDDDMNJKNA {
+message AbilityBornType {
 	Vector move_dir = 5;
 	Vector rot = 12;
 	Vector pos = 15;
@@ -29701,7 +29702,7 @@ message NDCOCHDDFCF {
 
 // CmdId: 5396
 message BAOLOMGDHIE {
-	uint32 AKCLAOEDBIN = 8;
+	uint32 cur_score = 8;
 }
 
 // CmdId: 23848
@@ -29890,7 +29891,7 @@ message NCJJBJFINDH {
 }
 
 message IIFBDGFCONB {
-	uint32 AKCLAOEDBIN = 2;
+	uint32 cur_score = 2;
 	uint32 end_time = 8;
 	uint32 CPIDJAPNNLL = 14;
 }
@@ -31040,7 +31041,7 @@ message IICJFHJKNAM {
 }
 
 // CmdId: 23176
-message BIOPKCELHAA {
+message AbilityInvocationFixedNotify {
 	AbilityInvokeEntry DJLCCHNAGBN = 2;
 	AbilityInvokeEntry JCJCHHHBMND = 3;
 	AbilityInvokeEntry CNJFHBHEFMG = 7;
@@ -31938,7 +31939,7 @@ message FPDOGHHPLAK {
 }
 
 message ECBBAIAPEIA {
-	uint32 AKCLAOEDBIN = 5;
+	uint32 cur_score = 5;
 	uint32 KADJLGKBFGN = 9;
 	uint32 BHODIPNCMIK = 11;
 	uint32 start_time = 14;
