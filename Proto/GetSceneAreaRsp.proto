@@ -1,0 +1,13 @@
+syntax = "proto3";
+option java_package = "emu.grasscutter.net.proto";
+
+import "CityInfo.proto";
+
+// 4.7.0
+// CmdId: 28603
+message GetSceneAreaRsp {
+	repeated uint32 area_id_list = 3;
+	uint32 scene_id = 5;
+	int32 retcode = 6;
+	repeated CityInfo city_info_list = 15;
+}

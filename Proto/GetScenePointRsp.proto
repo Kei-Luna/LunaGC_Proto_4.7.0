@@ -1,0 +1,20 @@
+syntax = "proto3";
+option java_package = "emu.grasscutter.net.proto";
+
+// 4.7.0
+// CmdId: 7225
+message GetScenePointRsp {
+	uint32 scene_id = 1;
+	int32 retcode = 2;
+	repeated uint32 MLNFAFFPPOP = 3;
+	repeated uint32 GLPBJFLCKCL = 4;
+	repeated uint32 unlock_area_list = 6;
+	bool LEPDAGALLND = 7;
+	repeated uint32 FJNNNLIJJBL = 8;
+	uint32 belong_uid = 9;
+	repeated uint32 unhide_point_list = 10;
+	repeated uint32 NEAHFHGMEKK = 11;
+	repeated uint32 DGFPDBCEBHH = 12;
+	repeated uint32 CKNEJGMGCKL = 13;
+	repeated uint32 unlocked_point_list = 14;
+}

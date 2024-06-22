@@ -1,0 +1,9 @@
+syntax = "proto3";
+option java_package = "emu.grasscutter.net.proto";
+
+// 4.7.0
+// CmdId: 28314
+message WearEquipReq {
+	uint64 avatar_guid = 1;
+	uint64 equip_guid = 3;
+}

@@ -1,0 +1,12 @@
+syntax = "proto3";
+option java_package = "emu.grasscutter.net.proto";
+
+import "Item.proto";
+import "StoreType.proto";
+
+// 4.7.0
+// CmdId: 825
+message StoreItemChangeNotify {
+	repeated Item item_list = 4;
+	StoreType store_type = 14;
+}
