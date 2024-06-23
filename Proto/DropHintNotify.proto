@@ -1,0 +1,11 @@
+syntax = "proto3";
+option java_package = "emu.grasscutter.net.proto";
+
+import "Vector.proto";
+
+// 4.7.0
+// CmdId: 9366
+message DropHintNotify {
+	Vector position = 1;
+	repeated uint32 item_id_list = 12;
+}

@@ -1,0 +1,11 @@
+syntax = "proto3";
+option java_package = "emu.grasscutter.net.proto";
+
+import "Birthday.proto";
+
+// 4.7.0
+// CmdId: 2617
+message SetPlayerBirthdayRsp {
+	int32 retcode = 1;
+	Birthday birthday = 12;
+}

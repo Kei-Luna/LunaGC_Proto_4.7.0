@@ -1,0 +1,14 @@
+syntax = "proto3";
+option java_package = "emu.grasscutter.net.proto";
+
+import ".proto";
+
+// 4.7.0
+// CmdId: 5540
+message ScenePointUnlockNotify {
+	repeated uint32 DGFPDBCEBHH = 1;
+	repeated uint32 point_list = 5;
+	repeated uint32 unhide_point_list = 9;
+	repeated uint32 NEAHFHGMEKK = 11;
+	uint32 scene_id = 15;
+}

@@ -1,0 +1,11 @@
+syntax = "proto3";
+option java_package = "emu.grasscutter.net.proto";
+
+import "AvatarInfo.proto";
+
+// 4.7.0
+// CmdId: 1694
+message AvatarAddNotify {
+	bool is_in_team = 3;
+	AvatarInfo avatar = 12;
+}
