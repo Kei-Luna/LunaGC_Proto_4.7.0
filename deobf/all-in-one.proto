@@ -30941,7 +30941,7 @@ message DNHAJJPGBBL {
 }
 
 // CmdId: 4798
-message JHEHCDIMBCL {
+message SceneTransToPointRsp {
 	uint32 scene_id = 7;
 	uint32 point_id = 10;
 	int32 retcode = 12;
