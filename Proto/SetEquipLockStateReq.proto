@@ -1,0 +1,9 @@
+syntax = "proto3";
+option java_package = "emu.grasscutter.net.proto";
+
+// 4.7.0
+// CmdId: 3852
+message SetEquipLockStateReq {
+	bool is_locked = 4;
+	uint64 target_equip_guid = 11;
+}

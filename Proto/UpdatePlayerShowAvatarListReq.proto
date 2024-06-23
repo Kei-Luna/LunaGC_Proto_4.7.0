@@ -1,0 +1,9 @@
+syntax = "proto3";
+option java_package = "emu.grasscutter.net.proto";
+
+// 4.7.0
+// CmdId: 27376
+message UpdatePlayerShowAvatarListReq {
+	repeated uint32 show_avatar_id_list = 7;
+	bool is_show_avatar = 8;
+}

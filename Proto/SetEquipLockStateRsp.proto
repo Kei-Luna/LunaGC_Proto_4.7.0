@@ -1,0 +1,10 @@
+syntax = "proto3";
+option java_package = "emu.grasscutter.net.proto";
+
+// 4.7.0
+// CmdId: 23492
+message SetEquipLockStateRsp {
+	uint64 target_equip_guid = 9;
+	int32 retcode = 11;
+	bool is_locked = 12;
+}
