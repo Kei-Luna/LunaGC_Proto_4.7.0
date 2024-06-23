@@ -1,8 +1,6 @@
 syntax = "proto3";
 option java_package = "emu.grasscutter.net.proto";
 
-import ".proto";
-
 // 4.7.0
 // CmdId: 5540
 message ScenePointUnlockNotify {
