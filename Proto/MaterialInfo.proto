@@ -1,0 +1,8 @@
+syntax = "proto3";
+option java_package = "emu.grasscutter.net.proto";
+
+// 4.7.0
+message MaterialInfo {
+	uint32 count = 12;
+	uint64 guid = 15;
+}
