@@ -1543,7 +1543,7 @@ message GNFMAHAJHGA {
 }
 
 // CmdId: 1182
-message OLAEGBJMEFL {
+message WeaponAwakenRsp {
 	uint32 BCGGLAKCPLO = 1;
 	map<uint32, uint32> CPENAIDNBFF = 2;
 	int32 retcode = 6;
