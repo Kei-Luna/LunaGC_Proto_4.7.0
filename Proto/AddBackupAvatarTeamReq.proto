@@ -1,0 +1,7 @@
+syntax = "proto3";
+option java_package = "emu.grasscutter.net.proto";
+
+// CmdId: 22689
+// 4.7.0
+message AddBackupAvatarTeamReq {
+}

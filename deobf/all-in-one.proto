@@ -1846,7 +1846,7 @@ message LCPNCGOIDAH {
 }
 
 // CmdId: 22689
-message IOBLPIFEACE {
+message AddBackupAvatarTeamReq {
 }
 
 // CmdId: 27625
@@ -20199,9 +20199,9 @@ message DOMJIPOHBPB {
 }
 
 // CmdId: 5780
-message PIDEENPNKFG {
+message DelBackupAvatarTeamRsp {
 	int32 retcode = 1;
-	uint32 NJANMOAOJIH = 15;
+	uint32 backup_avatar_team_id = 15;
 }
 
 message BMOPFKLLJPM {
@@ -23449,7 +23449,7 @@ message ShopConcertProduct {
 }
 
 // CmdId: 27356
-message IOGAHNNNFCM {
+message ChangeTeamNameRsp {
 	int32 retcode = 5;
 	string team_name = 6;
 	int32 team_id = 11;
@@ -25507,7 +25507,7 @@ message CDKPFBIFLNI {
 }
 
 // CmdId: 24699
-message IGAGHBIKAND {
+message ChangeTeamNameReq {
 	int32 team_id = 7;
 	string team_name = 14;
 }
@@ -27225,8 +27225,8 @@ message FONKPMDBKMF {
 }
 
 // CmdId: 20273
-message GIMKMOAJCLA {
-	uint32 NJANMOAOJIH = 9;
+message DelBackupAvatarTeamReq {
+	uint32 backup_avatar_team_id = 9;
 }
 
 message JPGKCIOPIED {
