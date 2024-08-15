@@ -23449,7 +23449,7 @@ message ShopConcertProduct {
 }
 
 // CmdId: 27356
-message IOGAHNNNFCM {
+message ChangeTeamNameRsp {
 	int32 retcode = 5;
 	string team_name = 6;
 	int32 team_id = 11;
@@ -25507,7 +25507,7 @@ message CDKPFBIFLNI {
 }
 
 // CmdId: 24699
-message IGAGHBIKAND {
+message ChangeTeamNameReq {
 	int32 team_id = 7;
 	string team_name = 14;
 }
