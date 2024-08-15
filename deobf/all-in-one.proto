@@ -20199,9 +20199,9 @@ message DOMJIPOHBPB {
 }
 
 // CmdId: 5780
-message PIDEENPNKFG {
+message DelBackupAvatarTeamRsp {
 	int32 retcode = 1;
-	uint32 NJANMOAOJIH = 15;
+	uint32 backup_avatar_team_id = 15;
 }
 
 message BMOPFKLLJPM {
