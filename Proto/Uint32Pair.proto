@@ -2,8 +2,7 @@ syntax = "proto3";
 option java_package = "emu.grasscutter.net.proto";
 
 //4.7.0
-message Vector {
-	float x = 1;
-	float y = 2;
-	float z = 3;
+message Uint32Pair {
+	uint32 key = 1;
+	uint32 value = 2;
 }

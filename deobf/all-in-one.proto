@@ -9810,8 +9810,8 @@ message LDHJPOOFFAE {
 }
 
 // CmdId: 2178
-message PGGDFNLKJPC {
-	uint32 FHBOIIEPBNN = 4;
+message HitTreeNotify {
+	uint32 tree_type = 4;
 	Vector KFLOFBJODFE = 9;
 	Vector KACOLGBPIJE = 11;
 }
@@ -14393,7 +14393,7 @@ message HNCMEPHEEOF {
 }
 
 message CBJHCLIDPBE {
-	uint32 FHBOIIEPBNN = 5;
+	uint32 tree_type = 5;
 	Vector KACOLGBPIJE = 10;
 }
 
