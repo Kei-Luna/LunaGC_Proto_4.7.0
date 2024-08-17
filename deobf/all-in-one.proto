@@ -11853,7 +11853,7 @@ message GGCPIJDDDMB {
 	int32 retcode = 14;
 }
 
-message DungeoEnterPosInfo {
+message DungeonEnterPosInfo {
 	uint32 point_id = 8;
 	uint32 quest_id = 9;
 }
@@ -13806,11 +13806,11 @@ message BEJILJHNPIB {
 	uint32 OIFFDDFEHLH = 10;
 }
 
-enum ENGIGHOJALO {
-	ENGIGHOJALO_DUNGEON_ENTRY_REASON_NONE = 0;
-	ENGIGHOJALO_DUNGEON_ENTRY_REASON_LEVEL = 1;
-	ENGIGHOJALO_DUNGEON_ENTRY_REASON_QUEST = 2;
-	ENGIGHOJALO_DUNGEON_ENTRY_REASON_MULIPLE = 3;
+enum DungeonEntryBlockReason {
+	DUNGEON_DUNGEON_ENTRY_REASON_NONE = 0;
+	DUNGEON_DUNGEON_ENTRY_REASON_LEVEL = 1;
+	DUNGEON_DUNGEON_ENTRY_REASON_QUEST = 2;
+	DUNGEON_DUNGEON_ENTRY_REASON_MULIPLE = 3;
 }
 
 // CmdId: 5393
@@ -23080,9 +23080,9 @@ message JDMOGIJBLOH {
 message GKHOHMEHGPF {
 }
 
-message HFNABBHGPAC {
+message DungeonEntryCond {
 	uint32 param1 = 13;
-	ENGIGHOJALO DKHMKPBIIMJ = 15;
+	DungeonEntryBlockReason cond_reason = 15;
 }
 
 // CmdId: 1130
@@ -26355,7 +26355,7 @@ message FMKLGCGOGKL {
 // CmdId: 21509
 message PlayerEnterDungeonReq {
 	uint32 dungeon_id = 2;
-	DungeoEnterPosInfo enter_pos_info = 9;
+	DungeonEnterPosInfo enter_pos_info = 9;
 	uint32 point_id = 11;
 }
 
@@ -26519,7 +26519,7 @@ message GachaInfo {
 	string OEAENFJOOAH = 14;
 	uint32 BCKAJGAPGOC = 15;
 	repeated uint32 LDACOBOBLDE = 49;
-	bool FHADOOFNHAH = 778;
+	bool is_new_wish = 778;
 	string MJFFKKDGLBN = 784;
 	repeated GachaUpInfo gacha_up_info_list = 802;
 	repeated uint32 OCBIFLEDBJD = 1046;

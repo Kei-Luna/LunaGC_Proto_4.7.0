@@ -1,8 +1,8 @@
 syntax = "proto3";
 option java_package = "emu.grasscutter.net.proto";
 
+// CmdId: 8385
 //4.7.0
-message Uint32Pair {
-	uint32 key = 1;
-	uint32 value = 2;
+message GetAllMailNotify {
+	bool is_collected = 1;
 }

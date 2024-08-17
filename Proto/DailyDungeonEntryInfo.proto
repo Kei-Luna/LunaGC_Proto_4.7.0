@@ -1,0 +1,14 @@
+syntax = "proto3";
+option java_package = "emu.grasscutter.net.proto";
+
+import "DungeonEntryInfo.proto";
+
+//4.7.0
+message DailyDungeonEntryInfo {
+	bool is_quick_open = 1;
+	uint32 dungeon_entry_config_id = 5;
+	DungeonEntryInfo recommend_dungeon_entry_info = 7;
+	uint32 dungeon_entry_id = 9;
+	uint32 recommend_dungeon_id = 13;
+	bool is_point_unlocked = 14;
+}
