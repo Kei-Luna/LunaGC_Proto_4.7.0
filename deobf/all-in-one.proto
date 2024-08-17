@@ -2837,7 +2837,7 @@ message OLBHHAFFFCE {
 
 // CmdId: 8024
 message AAMGNJNLNPJ {
-	repeated uint32 KNPCIPDKLFN = 5;
+	repeated uint32 id_list = 5;
 	int32 retcode = 9;
 	repeated ItemParam item_list = 14;
 }
@@ -5865,7 +5865,7 @@ message KMCIBLHJGAE {
 
 // CmdId: 6501
 message EOIFNDPMMHC {
-	repeated uint32 KNPCIPDKLFN = 7;
+	repeated uint32 id_list = 7;
 }
 
 message IDCHEKNBCID {
@@ -18206,15 +18206,24 @@ message HKHPJBNDJAD {
 	uint64 avatar_guid = 13;
 }
 
+//
+ enum Status {
+	STATUS_INVALID = 0;
+	STATUS_UNFINISHED = 1;
+	STATUS_FINISHED = 2;
+	STATUS_REWARD_TAKEN = 3;
+}
+// is this even needed? idk
+
 message Achievement {
-	enum OOJLILIFJLI {
-		OOJLILIFJLI_INVALID = 0;
-		OOJLILIFJLI_UNFINISHED = 1;
-		OOJLILIFJLI_FINISHED = 2;
-		OOJLILIFJLI_REWARD_TAKEN = 3;
+	enum Status {
+		STATUS_INVALID = 0;
+		STATUS_UNFINISHED = 1;
+		STATUS_FINISHED = 2;
+		STATUS_REWARD_TAKEN = 3;
 	}
 
-	OOJLILIFJLI status = 8;
+	Status status = 8;
 	uint32 total_progress = 9;
 	uint32 finish_timestamp = 13;
 	uint32 id = 14;
@@ -25026,7 +25035,7 @@ message GKGBGCNFCIG {
 
 // CmdId: 8945
 message NNIPPHOMNAE {
-	repeated uint32 KNPCIPDKLFN = 2;
+	repeated uint32 id_list = 2;
 	int32 retcode = 5;
 	repeated ItemParam item_list = 15;
 }
@@ -28152,7 +28161,7 @@ message ScenePlayInfoListNotify {
 
 // CmdId: 29798
 message FMJKPBJPKLP {
-	repeated uint32 KNPCIPDKLFN = 5;
+	repeated uint32 id_list = 5;
 }
 
 // CmdId: 26388
@@ -28913,7 +28922,7 @@ message ModifierProperty {
 // CmdId: 5979
 message CMJDIHAKIHN {
 	uint32 NDKICGLMGLD = 7;
-	repeated uint32 KNPCIPDKLFN = 13;
+	repeated uint32 id_list = 13;
 }
 
 // CmdId: 20927
