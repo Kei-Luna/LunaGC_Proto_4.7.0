@@ -1,7 +1,7 @@
 syntax = "proto3";
 option java_package = "emu.grasscutter.net.proto";
 
-// 4.7.0
+//4.7.0
 enum AvatarExpeditionState {
 	AVATAR_EXPEDITION_NONE = 0;
 	AVATAR_EXPEDITION_DOING = 1;

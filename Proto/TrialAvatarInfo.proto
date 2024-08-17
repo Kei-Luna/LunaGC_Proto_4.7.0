@@ -4,7 +4,8 @@ option java_package = "emu.grasscutter.net.proto";
 import "Item.proto";
 import "TrialAvatarGrantRecord.proto";
 
-// 4.7.0
+
+//4.7.0
 message TrialAvatarInfo {
 	uint32 trial_avatar_id = 1;
 	repeated Item trial_equip_list = 2;

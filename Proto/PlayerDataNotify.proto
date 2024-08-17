@@ -3,8 +3,8 @@ option java_package = "emu.grasscutter.net.proto";
 
 import "PropValue.proto";
 
-// 4.7.0
 // CmdId: 21169
+//4.7.0
 message PlayerDataNotify {
 	uint32 region_id = 1;
 	bool is_first_login_today = 2;
