@@ -9158,8 +9158,8 @@ message OMNDLBKKCLA {
 }
 
 // CmdId: 1825
-message GFJJJPLENCA {
-	uint32 OGIDGDKDCNA = 8;
+message BuyBattlePassLevelReq {
+	uint32 buy_level = 8;
 }
 
 // CmdId: 25533
@@ -14930,8 +14930,8 @@ message MPPDOGMPBMB {
 }
 
 // CmdId: 21428
-message IEMPGIOJOGD {
-	uint32 OGIDGDKDCNA = 11;
+message BuyBattlePassLevelRsp {
+	uint32 buy_level = 11;
 	int32 retcode = 14;
 }
 
@@ -15034,7 +15034,7 @@ message AttackResult {
 // CmdId: 2977
 message MGJOKKEECEF {
 	uint32 chapter_id = 3;
-	uint32 schedule_id = 8;
+	uint32 dule_id = 8;
 	uint32 EBACHNCCGBD = 9;
 }
 
@@ -22923,7 +22923,7 @@ message PlayerLuaShellNotify {
 }
 
 // CmdId: 21651
-message JJFBBHHGGMD {
+message BattlePassMissionUpdateNotify {
 	repeated BattlePassMission mission_list = 5;
 }
 
