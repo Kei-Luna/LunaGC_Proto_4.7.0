@@ -8632,7 +8632,7 @@ message MKLONEGLAFO {
 message BattlePassCycle {
 	uint32 begin_time = 2;
 	uint32 end_time = 6;
-	uint32 NEPOHGMNDJP = 15;
+	uint32 cycle_idx = 15;
 }
 
 message HHBOGCBMLAK {
@@ -21535,9 +21535,9 @@ message EJBDHIOBACJ {
 }
 
 enum BattlePassUnlockStatus {
-	BattlePassUnlockStatus_BATTLE_PASS_UNLOCK_INVALID = 0;
-	BattlePassUnlockStatus_BATTLE_PASS_UNLOCK_FREE = 1;
-	BattlePassUnlockStatus_BATTLE_PASS_UNLOCK_PAID = 2;
+	BATTLE_PASS_UNLOCK_STATUS_INVALID = 0;
+	BATTLE_PASS_UNLOCK_STATUS_FREE = 1;
+	BATTLE_PASS_UNLOCK_STATUS_PAID = 2;
 }
 
 // CmdId: 6544
