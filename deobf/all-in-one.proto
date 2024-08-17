@@ -7093,7 +7093,7 @@ message MOLPHCFGHCA {
 }
 
 // CmdId: 4649
-message FKHMPDHCAIK {
+message DungeonChallengeBeginNotify {
 	uint32 BPBGKNKBDGH = 2;
 	repeated uint32 param_list = 8;
 	repeated uint32 uid_list = 9;
