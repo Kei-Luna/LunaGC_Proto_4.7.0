@@ -1,7 +1,7 @@
 syntax = "proto3";
 option java_package = "emu.grasscutter.net.proto";
 
-// 4.7.0
+//4.7.0
 enum VisionType {
 	VISION_TYPE_NONE = 0;
 	VISION_TYPE_MEET = 1;

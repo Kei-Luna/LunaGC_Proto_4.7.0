@@ -4,8 +4,8 @@ option java_package = "emu.grasscutter.net.proto";
 import "ServerBuff.proto";
 import "PlayerDieType.proto";
 
-// 4.7.0
 // CmdId: 9435
+//4.7.0
 message LifeStateChangeNotify {
 	uint32 life_state = 2;
 	uint32 source_entity_id = 4;
