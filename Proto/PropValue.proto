@@ -1,7 +1,6 @@
 syntax = "proto3";
 option java_package = "emu.grasscutter.net.proto";
 
-// 4.7.0
 message PropValue {
 	uint32 type = 1;
 	int64 val = 4;

@@ -2002,12 +2002,12 @@ message BCOCBEDNBNH {
 	float OMAOJIPAJPI = 11;
 }
 
-message FBGIEOFFAKB {
+message CustomDungeonResultInfo {
 	uint32 MBDINBDJEHP = 1;
 	bool BKOOLKALFLJ = 6;
-	DBDANKKBKPL POJCFLBMLJN = 7;
+	CustomDungeonFinishType finish_type = 7;
 	bool HLJPHOJAIKC = 8;
-	repeated IHPNNDNPAAP AEBHPPPHOGB = 10;
+	repeated ChallengeBrief child_challenge_list = 10;
 	uint64 dungeon_guid = 12;
 	bool BNKFEBBFFNK = 13;
 	uint32 PIFAMKANMNF = 14;
@@ -2404,7 +2404,7 @@ message DCKOMBOBEOI {
 
 // CmdId: 27535
 message GJMFLLBMMGD {
-	uint32 BPBGKNKBDGH = 1;
+	uint32 challenge_id = 1;
 	uint32 stage_id = 15;
 }
 
@@ -2837,7 +2837,7 @@ message OLBHHAFFFCE {
 
 // CmdId: 8024
 message AAMGNJNLNPJ {
-	repeated uint32 KNPCIPDKLFN = 5;
+	repeated uint32 id_list = 5;
 	int32 retcode = 9;
 	repeated ItemParam item_list = 14;
 }
@@ -3105,7 +3105,7 @@ message PBNAEKNAKOB {
 message AHDJLLHHMGB {
 	uint32 FJFFOFFHFAA = 3;
 	uint32 skill_id = 6;
-	uint32 BPBGKNKBDGH = 7;
+	uint32 challenge_id = 7;
 	uint32 stage_id = 14;
 }
 
@@ -3913,7 +3913,7 @@ message JENFBFCONCA {
 	repeated uint32 CDAMBODBBII = 3;
 	uint32 difficulty_id = 7;
 	int32 retcode = 11;
-	uint32 BPBGKNKBDGH = 12;
+	uint32 challenge_id = 12;
 }
 
 // CmdId: 21801
@@ -4112,7 +4112,7 @@ message LBELLFIBBPN {
 
 message ExpeditionPathInfo {
 	uint32 path_id = 1;
-	uint32 BPBGKNKBDGH = 2;
+	uint32 challenge_id = 2;
 	float bonus_probability = 3;
 	uint32 DPJGCJBBBFJ = 5;
 	uint32 EGMHALAMOPD = 6;
@@ -5565,7 +5565,7 @@ message JPKNEMIJFEC {
 // CmdId: 26740
 message HAEFDAKIGPH {
 	uint32 stage_id = 3;
-	uint32 BPBGKNKBDGH = 5;
+	uint32 challenge_id = 5;
 }
 
 // CmdId: 5203
@@ -5865,7 +5865,7 @@ message KMCIBLHJGAE {
 
 // CmdId: 6501
 message EOIFNDPMMHC {
-	repeated uint32 KNPCIPDKLFN = 7;
+	repeated uint32 id_list = 7;
 }
 
 message IDCHEKNBCID {
@@ -7093,8 +7093,8 @@ message MOLPHCFGHCA {
 }
 
 // CmdId: 4649
-message FKHMPDHCAIK {
-	uint32 BPBGKNKBDGH = 2;
+message DungeonChallengeBeginNotify {
+	uint32 challenge_id = 2;
 	repeated uint32 param_list = 8;
 	repeated uint32 uid_list = 9;
 	uint32 AFGOJCCEFMI = 10;
@@ -8632,7 +8632,7 @@ message MKLONEGLAFO {
 message BattlePassCycle {
 	uint32 begin_time = 2;
 	uint32 end_time = 6;
-	uint32 NEPOHGMNDJP = 15;
+	uint32 cycle_idx = 15;
 }
 
 message HHBOGCBMLAK {
@@ -9158,8 +9158,8 @@ message OMNDLBKKCLA {
 }
 
 // CmdId: 1825
-message GFJJJPLENCA {
-	uint32 OGIDGDKDCNA = 8;
+message BuyBattlePassLevelReq {
+	uint32 buy_level = 8;
 }
 
 // CmdId: 25533
@@ -9810,8 +9810,8 @@ message LDHJPOOFFAE {
 }
 
 // CmdId: 2178
-message PGGDFNLKJPC {
-	uint32 FHBOIIEPBNN = 4;
+message HitTreeNotify {
+	uint32 tree_type = 4;
 	Vector KFLOFBJODFE = 9;
 	Vector KACOLGBPIJE = 11;
 }
@@ -9988,7 +9988,7 @@ message AiThreatInfo {
 message KCPCKMMJILG {
 	uint32 IIOKFMIJFFO = 1;
 	uint32 JFDJHPNCLBA = 2;
-	uint32 BPBGKNKBDGH = 6;
+	uint32 challenge_id = 6;
 	bool is_success = 9;
 }
 
@@ -11853,7 +11853,7 @@ message GGCPIJDDDMB {
 	int32 retcode = 14;
 }
 
-message DungeoEnterPosInfo {
+message DungeonEnterPosInfo {
 	uint32 point_id = 8;
 	uint32 quest_id = 9;
 }
@@ -12710,7 +12710,7 @@ message PNBLLAJBCDD {
 	bool BOLDJOIMHMN = 6;
 	bool PHGAKGMPBGI = 7;
 	bool is_new_record = 9;
-	uint32 BPBGKNKBDGH = 10;
+	uint32 challenge_id = 10;
 	bool ALMLKCGBNDA = 11;
 	bool PGNKNJLALFE = 14;
 }
@@ -13806,11 +13806,11 @@ message BEJILJHNPIB {
 	uint32 OIFFDDFEHLH = 10;
 }
 
-enum ENGIGHOJALO {
-	ENGIGHOJALO_DUNGEON_ENTRY_REASON_NONE = 0;
-	ENGIGHOJALO_DUNGEON_ENTRY_REASON_LEVEL = 1;
-	ENGIGHOJALO_DUNGEON_ENTRY_REASON_QUEST = 2;
-	ENGIGHOJALO_DUNGEON_ENTRY_REASON_MULIPLE = 3;
+enum DungeonEntryBlockReason {
+	DUNGEON_DUNGEON_ENTRY_REASON_NONE = 0;
+	DUNGEON_DUNGEON_ENTRY_REASON_LEVEL = 1;
+	DUNGEON_DUNGEON_ENTRY_REASON_QUEST = 2;
+	DUNGEON_DUNGEON_ENTRY_REASON_MULIPLE = 3;
 }
 
 // CmdId: 5393
@@ -13859,7 +13859,7 @@ message NMAOFFNEFAE {
 // CmdId: 23585
 message JODPLCKDONL {
 	uint32 challenge_index = 3;
-	uint32 BPBGKNKBDGH = 4;
+	uint32 challenge_id = 4;
 	uint32 group_id = 11;
 	int32 retcode = 14;
 }
@@ -14393,7 +14393,7 @@ message HNCMEPHEEOF {
 }
 
 message CBJHCLIDPBE {
-	uint32 FHBOIIEPBNN = 5;
+	uint32 tree_type = 5;
 	Vector KACOLGBPIJE = 10;
 }
 
@@ -14647,7 +14647,7 @@ message OMEPEGPCMPN {
 }
 
 message OOLKKBCABHF {
-	uint32 BPBGKNKBDGH = 4;
+	uint32 challenge_id = 4;
 	bool PGNKNJLALFE = 7;
 	uint32 best_score = 13;
 }
@@ -14930,8 +14930,8 @@ message MPPDOGMPBMB {
 }
 
 // CmdId: 21428
-message IEMPGIOJOGD {
-	uint32 OGIDGDKDCNA = 11;
+message BuyBattlePassLevelRsp {
+	uint32 buy_level = 11;
 	int32 retcode = 14;
 }
 
@@ -15034,7 +15034,7 @@ message AttackResult {
 // CmdId: 2977
 message MGJOKKEECEF {
 	uint32 chapter_id = 3;
-	uint32 schedule_id = 8;
+	uint32 dule_id = 8;
 	uint32 EBACHNCCGBD = 9;
 }
 
@@ -17733,7 +17733,7 @@ message NEAEHCDOGIF {
 // CmdId: 9608
 message EMHHNCFJLAM {
 	uint32 IIOKFMIJFFO = 6;
-	uint32 BPBGKNKBDGH = 8;
+	uint32 challenge_id = 8;
 	uint32 difficulty_id = 14;
 	repeated uint32 CDAMBODBBII = 15;
 }
@@ -18206,15 +18206,24 @@ message HKHPJBNDJAD {
 	uint64 avatar_guid = 13;
 }
 
+//
+ enum Status {
+	STATUS_INVALID = 0;
+	STATUS_UNFINISHED = 1;
+	STATUS_FINISHED = 2;
+	STATUS_REWARD_TAKEN = 3;
+}
+// is this even needed? idk
+
 message Achievement {
-	enum OOJLILIFJLI {
-		OOJLILIFJLI_INVALID = 0;
-		OOJLILIFJLI_UNFINISHED = 1;
-		OOJLILIFJLI_FINISHED = 2;
-		OOJLILIFJLI_REWARD_TAKEN = 3;
+	enum Status {
+		STATUS_INVALID = 0;
+		STATUS_UNFINISHED = 1;
+		STATUS_FINISHED = 2;
+		STATUS_REWARD_TAKEN = 3;
 	}
 
-	OOJLILIFJLI status = 8;
+	Status status = 8;
 	uint32 total_progress = 9;
 	uint32 finish_timestamp = 13;
 	uint32 id = 14;
@@ -19789,7 +19798,7 @@ message ELMEPCFHNFE {
 
 message NNNECCFMAHJ {
 	uint32 cur_progress = 5;
-	uint32 BPBGKNKBDGH = 6;
+	uint32 challenge_id = 6;
 	uint32 total_progress = 12;
 }
 
@@ -20301,7 +20310,7 @@ message NMNLNLNKDJC {
 	bool JKIGHIHBKBO = 3;
 	uint32 CHMPMBNIGLC = 4;
 	uint32 begin_time = 5;
-	uint32 BPBGKNKBDGH = 6;
+	uint32 challenge_id = 6;
 	uint32 JFDJHPNCLBA = 11;
 	uint32 MOCBGKBNNCI = 13;
 }
@@ -21363,7 +21372,7 @@ message CCCNFAMFDMH {
 	uint32 FPKJAEGKLKA = 2;
 	uint32 challenge_index = 5;
 	uint32 FJGFDOPBDHM = 6;
-	uint32 BPBGKNKBDGH = 10;
+	uint32 challenge_id = 10;
 }
 
 // CmdId: 5274
@@ -21526,9 +21535,9 @@ message EJBDHIOBACJ {
 }
 
 enum BattlePassUnlockStatus {
-	BattlePassUnlockStatus_BATTLE_PASS_UNLOCK_INVALID = 0;
-	BattlePassUnlockStatus_BATTLE_PASS_UNLOCK_FREE = 1;
-	BattlePassUnlockStatus_BATTLE_PASS_UNLOCK_PAID = 2;
+	BATTLE_PASS_UNLOCK_STATUS_INVALID = 0;
+	BATTLE_PASS_UNLOCK_STATUS_FREE = 1;
+	BATTLE_PASS_UNLOCK_STATUS_PAID = 2;
 }
 
 // CmdId: 6544
@@ -21781,7 +21790,7 @@ message HHCIOCLLLKK {
 }
 
 message BELBHMGOGNK {
-	uint32 BPBGKNKBDGH = 1;
+	uint32 challenge_id = 1;
 	uint32 IIOKFMIJFFO = 2;
 	bool is_success = 4;
 	uint32 JFDJHPNCLBA = 10;
@@ -22043,11 +22052,11 @@ message JHKPODCDNAH {
 	repeated ECBIGKOCCND level_info_list = 4;
 }
 
-message IHPNNDNPAAP {
+message ChallengeBrief {
 	bool is_success = 1;
 	uint32 challenge_index = 3;
 	uint32 cur_progress = 4;
-	uint32 BPBGKNKBDGH = 14;
+	uint32 challenge_id = 14;
 }
 
 // CmdId: 20552
@@ -22868,7 +22877,7 @@ message MBEFPPCAGAP {
 	uint32 finish_time = 3;
 	uint32 BEEBCHJIAEK = 6;
 	bool is_success = 10;
-	repeated FJKAHNLGDJL AEBHPPPHOGB = 14;
+	repeated FJKAHNLGDJL child_challenge_list = 14;
 	bool DFHGGFPOGFK = 15;
 }
 
@@ -22914,7 +22923,7 @@ message PlayerLuaShellNotify {
 }
 
 // CmdId: 21651
-message JJFBBHHGGMD {
+message BattlePassMissionUpdateNotify {
 	repeated BattlePassMission mission_list = 5;
 }
 
@@ -23071,9 +23080,9 @@ message JDMOGIJBLOH {
 message GKHOHMEHGPF {
 }
 
-message HFNABBHGPAC {
+message DungeonEntryCond {
 	uint32 param1 = 13;
-	ENGIGHOJALO DKHMKPBIIMJ = 15;
+	DungeonEntryBlockReason cond_reason = 15;
 }
 
 // CmdId: 1130
@@ -23855,7 +23864,7 @@ message PlayerPropNotify {
 
 // CmdId: 22652
 message IGLBDJABPDJ {
-	uint32 BPBGKNKBDGH = 7;
+	uint32 challenge_id = 7;
 }
 
 // CmdId: 27656
@@ -24193,7 +24202,7 @@ enum AuditState {
 // CmdId: 8386
 message POKEIAJKLJK {
 	int32 retcode = 3;
-	uint32 BPBGKNKBDGH = 9;
+	uint32 challenge_id = 9;
 }
 
 message AbilityScalarValueEntry {
@@ -24443,7 +24452,7 @@ message FJKAHNLGDJL {
 	uint32 ECEDBNIECOJ = 6;
 	bool HJFFJKFNNPB = 8;
 	uint32 challenge_index = 10;
-	uint32 BPBGKNKBDGH = 15;
+	uint32 challenge_id = 15;
 }
 
 // CmdId: 20176
@@ -24638,7 +24647,7 @@ message HHCEJIFMJFF {
 // CmdId: 21064
 message HHAJENFCHPG {
 	uint32 BKFGICIGELA = 1;
-	uint32 BPBGKNKBDGH = 2;
+	uint32 challenge_id = 2;
 	uint32 stage_id = 4;
 	uint32 KDAMOIOIEBL = 5;
 	uint32 BBDENNFCFKK = 6;
@@ -24668,7 +24677,7 @@ message CJMHCLOKKIO {
 // CmdId: 9251
 message MHEABDHFNCP {
 	uint32 difficulty_id = 5;
-	uint32 BPBGKNKBDGH = 7;
+	uint32 challenge_id = 7;
 	int32 retcode = 8;
 	uint32 point_id = 10;
 	repeated uint32 CDAMBODBBII = 13;
@@ -24774,12 +24783,13 @@ message EKIIMAOMOBK {
 message HEHAPGKJDPF {
 }
 
-enum DBDANKKBKPL {
-	DBDANKKBKPL_CUSTOM_DUNGEON_FINISH_PLAY_NORMAL = 0;
-	DBDANKKBKPL_CUSTOM_DUNGEON_FINISH_PLAY_TRY = 1;
-	DBDANKKBKPL_CUSTOM_DUNGEON_FINISH_EDIT_TRY = 2;
-	DBDANKKBKPL_CUSTOM_DUNGEON_FINISH_SELF_PLAY_NORMAL = 3;
+enum CustomDungeonFinishType {
+	CUSTOM_DUNGEON_FINISH_PLAY_NORMAL = 0;
+	CUSTOM_DUNGEON_FINISH_PLAY_TRY = 1;
+	CUSTOM_DUNGEON_FINISH_EDIT_TRY = 2;
+	CUSTOM_DUNGEON_FINISH_SELF_PLAY_NORMAL = 3;
 }
+
 
 // CmdId: 24247
 message HPFEOBFMBJO {
@@ -25026,7 +25036,7 @@ message GKGBGCNFCIG {
 
 // CmdId: 8945
 message NNIPPHOMNAE {
-	repeated uint32 KNPCIPDKLFN = 2;
+	repeated uint32 id_list = 2;
 	int32 retcode = 5;
 	repeated ItemParam item_list = 15;
 }
@@ -26295,30 +26305,31 @@ message NPMCBKKIIKO {
 }
 
 enum CombatTypeArgument {
-	CombatTypeArgument_COMBAT_NONE = 0;
-	CombatTypeArgument_COMBAT_EVT_BEING_HIT = 1;
-	CombatTypeArgument_COMBAT_ANIMATOR_STATE_CHANGED = 2;
-	CombatTypeArgument_COMBAT_FACE_TO_DIR = 3;
-	CombatTypeArgument_COMBAT_SET_ATTACK_TARGET = 4;
-	CombatTypeArgument_COMBAT_RUSH_MOVE = 5;
-	CombatTypeArgument_COMBAT_ANIMATOR_PARAMETER_CHANGED = 6;
-	CombatTypeArgument_ENTITY_MOVE = 7;
-	CombatTypeArgument_SYNC_ENTITY_POSITION = 8;
-	CombatTypeArgument_COMBAT_STEER_MOTION_INFO = 9;
-	CombatTypeArgument_COMBAT_FORCE_SET_POS_INFO = 10;
-	CombatTypeArgument_COMBAT_COMPENSATE_POS_DIFF = 11;
-	CombatTypeArgument_COMBAT_MONSTER_DO_BLINK = 12;
-	CombatTypeArgument_COMBAT_FIXED_RUSH_MOVE = 13;
-	CombatTypeArgument_COMBAT_SYNC_TRANSFORM = 14;
-	CombatTypeArgument_COMBAT_LIGHT_CORE_MOVE = 15;
-	CombatTypeArgument_COMBAT_BEING_HEALED_NTF = 16;
-	CombatTypeArgument_COMBAT_SKILL_ANCHOR_POSITION_NTF = 17;
-	CombatTypeArgument_COMBAT_GRAPPLING_HOOK_MOVE = 18;
-	CombatTypeArgument_COMBAT_SPECIAL_MOTION_INFO = 19;
-	CombatTypeArgument_COMBAT_FIXED_AVATAR_FLASH_MOVE = 20;
-	CombatTypeArgument_COMBAT_MULTI_OVERRIDE_ANIM = 21;
-	CombatTypeArgument_COMBAT_DEBUG_SYNC_MOTION = 22;
+	COMBAT_TYPE_ARGUMENT_NONE = 0;
+	COMBAT_TYPE_ARGUMENT_EVT_BEING_HIT = 1;
+	COMBAT_TYPE_ARGUMENT_ANIMATOR_STATE_CHANGED = 2;
+	COMBAT_TYPE_ARGUMENT_FACE_TO_DIR = 3;
+	COMBAT_TYPE_ARGUMENT_SET_ATTACK_TARGET = 4;
+	COMBAT_TYPE_ARGUMENT_RUSH_MOVE = 5;
+	COMBAT_TYPE_ARGUMENT_ANIMATOR_PARAMETER_CHANGED = 6;
+	COMBAT_TYPE_ARGUMENT_ENTITY_MOVE = 7;
+	COMBAT_TYPE_ARGUMENT_SYNC_ENTITY_POSITION = 8;
+	COMBAT_TYPE_ARGUMENT_STEER_MOTION_INFO = 9;
+	COMBAT_TYPE_ARGUMENT_FORCE_SET_POS_INFO = 10;
+	COMBAT_TYPE_ARGUMENT_COMPENSATE_POS_DIFF = 11;
+	COMBAT_TYPE_ARGUMENT_MONSTER_DO_BLINK = 12;
+	COMBAT_TYPE_ARGUMENT_FIXED_RUSH_MOVE = 13;
+	COMBAT_TYPE_ARGUMENT_SYNC_TRANSFORM = 14;
+	COMBAT_TYPE_ARGUMENT_LIGHT_CORE_MOVE = 15;
+	COMBAT_TYPE_ARGUMENT_BEING_HEALED_NTF = 16;
+	COMBAT_TYPE_ARGUMENT_SKILL_ANCHOR_POSITION_NTF = 17;
+	COMBAT_TYPE_ARGUMENT_GRAPPLING_HOOK_MOVE = 18;
+	COMBAT_TYPE_ARGUMENT_SPECIAL_MOTION_INFO = 19;
+	COMBAT_TYPE_ARGUMENT_FIXED_AVATAR_FLASH_MOVE = 20;
+	COMBAT_TYPE_ARGUMENT_MULTI_OVERRIDE_ANIM = 21;
+	COMBAT_TYPE_ARGUMENT_DEBUG_SYNC_MOTION = 22;
 }
+
 
 // CmdId: 21368
 message HOKFGENAJBP {
@@ -26346,7 +26357,7 @@ message FMKLGCGOGKL {
 // CmdId: 21509
 message PlayerEnterDungeonReq {
 	uint32 dungeon_id = 2;
-	DungeoEnterPosInfo enter_pos_info = 9;
+	DungeonEnterPosInfo enter_pos_info = 9;
 	uint32 point_id = 11;
 }
 
@@ -26510,7 +26521,7 @@ message GachaInfo {
 	string OEAENFJOOAH = 14;
 	uint32 BCKAJGAPGOC = 15;
 	repeated uint32 LDACOBOBLDE = 49;
-	bool FHADOOFNHAH = 778;
+	bool is_new_wish = 778;
 	string MJFFKKDGLBN = 784;
 	repeated GachaUpInfo gacha_up_info_list = 802;
 	repeated uint32 OCBIFLEDBJD = 1046;
@@ -27204,7 +27215,7 @@ message HLAOKHGPHHK {
 // CmdId: 21203
 message BGCAOOFGGCN {
 	uint32 difficulty_id = 3;
-	uint32 BPBGKNKBDGH = 4;
+	uint32 challenge_id = 4;
 	repeated uint32 CDAMBODBBII = 12;
 }
 
@@ -27614,7 +27625,7 @@ enum AreaPlayType {
 // CmdId: 26319
 message GGINBPBGJHM {
 	uint32 challenge_index = 3;
-	uint32 BPBGKNKBDGH = 5;
+	uint32 challenge_id = 5;
 	uint32 group_id = 15;
 }
 
@@ -27642,7 +27653,7 @@ message CEPEBFLLCLB {
 	bool is_new_record = 2;
 	uint32 FPKJAEGKLKA = 4;
 	uint32 PIFAMKANMNF = 5;
-	DILEFMOGENI POJCFLBMLJN = 6;
+	DILEFMOGENI finish_type = 6;
 	map<uint32, AKOJJAJLNON> PNPLHAOIEAK = 7;
 	uint32 challenge_index = 13;
 	uint32 OKGJMCCFJAM = 14;
@@ -27650,7 +27661,7 @@ message CEPEBFLLCLB {
 		DLDOBPFIDNL channeller_slab_loop_dungeon_result_info = 917;
 		BELBHMGOGNK effigy_challenge_dungeon_result_info = 165;
 		PEMGKEBLILD potion_dungeon_result_info = 1784;
-		FBGIEOFFAKB custom_dungeon_result_info = 1317;
+		CustomDungeonResultInfo custom_dungeon_result_info = 1317;
 	}
 }
 
@@ -28152,7 +28163,7 @@ message ScenePlayInfoListNotify {
 
 // CmdId: 29798
 message FMJKPBJPKLP {
-	repeated uint32 KNPCIPDKLFN = 5;
+	repeated uint32 id_list = 5;
 }
 
 // CmdId: 26388
@@ -28913,7 +28924,7 @@ message ModifierProperty {
 // CmdId: 5979
 message CMJDIHAKIHN {
 	uint32 NDKICGLMGLD = 7;
-	repeated uint32 KNPCIPDKLFN = 13;
+	repeated uint32 id_list = 13;
 }
 
 // CmdId: 20927
@@ -29588,7 +29599,7 @@ message IEHOIICGMPM {
 	uint32 point_id = 3;
 	uint32 difficulty_id = 5;
 	repeated uint32 CDAMBODBBII = 11;
-	uint32 BPBGKNKBDGH = 13;
+	uint32 challenge_id = 13;
 }
 
 // CmdId: 4335
@@ -31446,7 +31457,7 @@ message GONJGHIDEBG {
 	bool BIKOPOBICOG = 2;
 	repeated HMKNOALGCDD BIOJNLHEDID = 4;
 	uint32 BBDENNFCFKK = 5;
-	uint32 BPBGKNKBDGH = 8;
+	uint32 challenge_id = 8;
 	uint32 KDAMOIOIEBL = 10;
 	uint32 KCCGKAFNBOK = 11;
 	int32 retcode = 12;

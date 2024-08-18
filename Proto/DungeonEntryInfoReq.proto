@@ -3,8 +3,8 @@ option java_package = "emu.grasscutter.net.proto";
 
 import "Uint32Pair.proto";
 
-// 4.7.0
 // CmdId: 730
+//4.7.0
 message DungeonEntryInfoReq {
 	uint32 point_id = 3;
 	repeated Uint32Pair scene_point_id_list = 12;

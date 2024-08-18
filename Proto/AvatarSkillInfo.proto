@@ -1,7 +1,6 @@
 syntax = "proto3";
 option java_package = "emu.grasscutter.net.proto";
 
-// 4.7.0
 message AvatarSkillInfo {
 	uint32 pass_cd_time = 1;
 	repeated uint32 full_cd_time_list = 2;

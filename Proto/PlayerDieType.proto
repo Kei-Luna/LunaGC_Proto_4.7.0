@@ -1,7 +1,7 @@
 syntax = "proto3";
 option java_package = "emu.grasscutter.net.proto";
 
-// 4.7.0
+//4.7.0
 enum PlayerDieType {
 	PLAYER_DIE_TYPE_NONE = 0;
 	PLAYER_DIE_TYPE_KILL_BY_MONSTER = 1;

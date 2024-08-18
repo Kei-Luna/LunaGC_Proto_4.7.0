@@ -5,7 +5,7 @@ import "AvatarInfo.proto";
 import "AvatarTeam.proto";
 import "AvatarRenameInfo.proto";
 
-// 4.7.0
+
 // CmdId: 26021
 message AvatarDataNotify {
 	repeated AvatarInfo avatar_list = 7;

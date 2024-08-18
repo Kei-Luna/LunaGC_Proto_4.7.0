@@ -10,7 +10,7 @@ import "AvatarEquipAffixInfo.proto";
 import "AvatarExcelInfo.proto";
 //import "JCDPOCOOGCI.proto";
 
-// 4.7.0
+//4.7.0
 message AvatarInfo {
 	uint32 avatar_id = 1;
 	uint64 guid = 2;
@@ -38,6 +38,7 @@ message AvatarInfo {
 	uint32 costume_id = 25;
 	AvatarExcelInfo excel_info = 26;
 	uint32 anim_hash = 27;
-	//JCDPOCOOGCI PDGKJIIEPIO = 28;
-	uint32 GJFKDCJENJE = 29;
+	//NPNPJNHOFAB JACMFBKJANM = 28;
+	uint32 HIMOJHLCKGB = 29;
+	uint32 OLGFIIKLEOM = 30;
 }

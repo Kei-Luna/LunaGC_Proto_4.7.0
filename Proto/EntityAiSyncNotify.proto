@@ -1,0 +1,11 @@
+syntax = "proto3";
+option java_package = "emu.grasscutter.net.proto";
+
+import "AiSyncInfo.proto";
+
+// CmdId: 24710
+//4.7.0
+message EntityAiSyncNotify {
+	repeated uint32 local_avatar_alerted_monster_list = 6;
+	repeated AiSyncInfo info_list = 13;
+}

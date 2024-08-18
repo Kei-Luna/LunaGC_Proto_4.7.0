@@ -1,0 +1,12 @@
+syntax = "proto3";
+option java_package = "emu.grasscutter.net.proto";
+
+//4.7.0
+message AbilityIdentifier {
+	uint32 HDPFOJMGBJA = 5;
+	bool is_serverbuff_modifier = 6;
+	uint32 IPGHMJALPKC = 7;
+	int32 local_id = 10;
+	uint32 instanced_modifier_id = 14;
+	uint32 instanced_ability_id = 15;
+}

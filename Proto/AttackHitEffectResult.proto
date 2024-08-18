@@ -1,0 +1,12 @@
+syntax = "proto3";
+option java_package = "emu.grasscutter.net.proto";
+
+//4.7.0
+message AttackHitEffectResult {
+	float ICKHFGPOHOB = 1;
+	float PJBNLHEDMKH = 2;
+	float HEMHBCPCDAP = 3;
+	uint32 AJFIGFGCMLO = 12;
+	float CEECMAJGHLC = 14;
+	uint32 MHOBBFJGOFL = 15;
+}

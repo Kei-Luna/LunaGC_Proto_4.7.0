@@ -1,0 +1,24 @@
+syntax = "proto3";
+option java_package = "emu.grasscutter.net.proto";
+
+import "BattlePassRewardTag.proto";
+import "BattlePassProduct.proto";
+import "BattlePassUnlockStatus.proto";
+import "BattlePassCycle.proto";
+
+//4.7.0
+message BattlePassSchedule {
+	repeated BattlePassRewardTag reward_taken_list = 2;
+	uint32 point = 3;
+	BattlePassUnlockStatus unlock_status = 5;
+	BattlePassCycle cur_cycle = 6;
+	uint32 cur_cycle_points = 7;
+	uint32 paid_platform_flags = 8;
+	uint32 begin_time = 9;
+	bool is_extra_paid_reward_taken = 10;
+	bool is_viewed = 11;
+	BattlePassProduct product_info = 12;
+	uint32 level = 13;
+	uint32 end_time = 14;
+	uint32 schedule_id = 15;
+}

@@ -1,0 +1,12 @@
+syntax = "proto3";
+option java_package = "emu.grasscutter.net.proto";
+
+import "EvtBeingHitInfo.proto";
+import "ForwardType.proto";
+
+// CmdId: 6997
+//4.7.0
+message EvtBeingHitNotify {
+	ForwardType forward_type = 12;
+	EvtBeingHitInfo being_hit_info = 14;
+}
